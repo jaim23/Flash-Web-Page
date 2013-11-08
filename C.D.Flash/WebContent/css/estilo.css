@@ -50,6 +50,12 @@ list-style:none;
 	margin-left:50px;
 }
 
+.cuadro{
+	border-style:solid;
+	border-width:1px;
+	
+}
+
 .Linea{
 	border-style:solid;
 	border-width:1px;
