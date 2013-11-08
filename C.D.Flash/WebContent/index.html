@@ -4,6 +4,7 @@
 <head>
 	<link href="css/estilo.css" rel="stylesheet" type="text/css">
 	<link href="css/rejilla.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/script.js"></script>
 	<meta charset="UTF-8">
 	<title>C.D. Flash</title>
 </head>
@@ -33,15 +34,15 @@
 		<!-- Menu Vertical  -->
 				<nav  class="MenuVertical" >
 					<ul>
-						<li>Noticias</li>
-						<li>Instalaciones</li>
-						<li>Servicios</li>
+						<li onclick="ocultar(); ver('Noticias');"> Noticias</li>
+						<li onclick="ocultar();ver('Instalaciones');">Instalaciones</li>
+						<li onclick="ocultar();ver('Servicios');">Servicios</li>
 						<li>Contacto</li>
-						<li>Registrate</li>
+						<li onclick="ocultar();ver('Registro');">Registrate</li>
 					</ul>				
 				</nav>
 			<!-- Contenido del submenu -->
-			<div class="grid_7 push_1">
+			<div class="grid_7 push_1" id="Noticias">
 			<article><p>La lógica para todas estas instituciones es que la bola que les toque en suerte sea la de uno de los tres equipos que lideran la clasificación de la actual Liga (Barcelona, Madrid o Atlético), aunque el Sant Andreu fue el único que se desmarcó de esta trilogía y opta para que les caiga uno de los equipos andaluces, preferentemente el Betis, descartando de pleno la opción azulgrana.</p>
 					<p>La elección tiene su lógica, ya que estos pertenecen a un barrio de Barcelona y un supuesto enfrentamiento con los azulgranas no tendría el mismo atractivo que si el rival fuesen los béticos, ya que Sant Andreu cuenta entre su población con una importante masa de andaluces.</p>
 			</article>
@@ -55,6 +56,23 @@
 					<p>La elección tiene su lógica, ya que estos pertenecen a un barrio de Barcelona y un supuesto enfrentamiento con los azulgranas no tendría el mismo atractivo que si el rival fuesen los béticos, ya que Sant Andreu cuenta entre su población con una importante masa de andaluces.</p>
 			</article>
 			</div>
+			
+			<div class="grid_7 push_1" id="Instalaciones">
+			<article><p>La lógica para todas estas instituciones es que la bola que les toque en suerte se</p>
+			</article>
+	
+			</div>
+						<div class="grid_7 push_1" id="Servicios">
+			<article><p>Servicios...</p>
+			</article>
+	
+			</div>
+			<div class="grid_7 push_1" id="Registro">
+			<article><p>Registro....</p>
+			</article>
+	
+			</div>
+			
 			
 		</div>
 		
