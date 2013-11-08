@@ -60,3 +60,11 @@ list-style:none;
 .logo{
 	float:right;
 }
+
+#pie a{
+	color:#000000;
+}
+
+#pie a:hover{
+	color:#FD2526;
+}
