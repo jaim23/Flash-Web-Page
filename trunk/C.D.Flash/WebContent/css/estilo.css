@@ -91,7 +91,14 @@ list-style:none;
 }
 
 #Instalaciones{
-
 	display:none;
-	
+}
+#Contacto{
+	display:none;
+}
+#Servicios{
+	display:none;
+}
+#Registro{
+	display:none;
 }
