@@ -20,5 +20,18 @@ function ver(entrada)
 
 function validar(){
 	
+	var x=document.forms["registro"]["nombre"].value;
+	if (x==null || x=="")
+	{
+	  alert("Campo Nombre no puede estar vacio");
+	  return false;
+	}
 	
+	var y=document.forms["registro"]["apellidos"].value;
+	if (y==null || y=="")
+	{
+	  alert("Campo Apellido no puede estar vacio");
+	  return false;
+	}
+
 }
