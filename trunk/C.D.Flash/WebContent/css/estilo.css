@@ -90,15 +90,7 @@ list-style:none;
 	
 }
 
-#Instalaciones{
+#Opcion2, #Opcion3, #Opcion4, #Opcion5 {
 	display:none;
 }
-#Contacto{
-	display:none;
-}
-#Servicios{
-	display:none;
-}
-#Registro{
-	display:none;
-}
+

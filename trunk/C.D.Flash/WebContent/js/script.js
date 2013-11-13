@@ -1,16 +1,16 @@
 
 var entrada;
+var seleccion;
 
 
-function ocultar()
-{
-	document.getElementById("Opcion1").style.display="none";
-	document.getElementById("Opcion2").style.display="none";
-	document.getElementById("Opcion3").style.display="none";
-	document.getElementById("Opcion4").style.display="none";
-	document.getElementById("Opcion5").style.display="none";
+function ocultar(seleccion)
+{	
+	for(var i = 1 ;i<=seleccion;i++){
+	document.getElementById('Opcion'+i).style.display="none";
+	}
 	
 }
+
 
 function ver(entrada)
 {
