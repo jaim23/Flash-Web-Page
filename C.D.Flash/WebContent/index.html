@@ -75,25 +75,24 @@
 			</div>
 			<div class="grid_7 push_1" id="Opcion5">
 			<article><p>Registro....</p>
-				<form class="registro" action="#" method="post" onsubmit="validar()">
-				<p><label>Nombre:
+				<form name="registro" action="#" onsubmit="return validar();" method="post" >
+				
+				<label>Nombre:</label>
 					<input type="text" name="nombre">
-				</label></p>
-				<p><label>Apellidos:
+				<label>Apellidos:</label>
 					<input type="text" name="apellidos">
-				</label></p>
-				<p><label>Correo Electronico:
-				<input type="text" name="correo">
-				</label></p>
-				<p><label>Repita Correo Electronico:
-				<input type="text" name="c_correo">
-				</label></p>
-				<p><label>Contraseña:
-				<input type="password" name="pwd">
-				</label></p>
-				<p><label>Repita Contraseña:
-				<input type="password" name="c_pwd">
-				</label></p>
+				
+				<label>Correo Electronico:</label>
+					<input type="text" name="correo">
+				
+				<label>Repita Correo Electronico:</label>
+					<input type="text" name="c_correo">
+				
+				<label>Contraseña:</label>
+					<input type="password" name="pwd">
+		
+				<label>Repita Contraseña:</label>
+					<input type="password" name="c_pwd">
 				
 				<input type="checkbox" name="condiciones" value="Si">
 				Acepto las condiciones legales <a href="avisoLegal.html">AVISO LEGAL </a>
