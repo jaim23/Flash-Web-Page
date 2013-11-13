@@ -79,32 +79,29 @@
 			</div>
 			<div class="grid_7 push_1" id="Opcion5">
 			<div class="titulos">Registro</div><br>
-				<form name="registro" action="#" onsubmit="return validar();" method="post" >
+				<div class="grid_4 push_2">
+				<form class="Registro" name="registro" action="#" onsubmit="return validar();" method="post" >
 				
 				<label>Nombre:</label>
-					<input type="text" name="nombre">
+					<span class="Reg_nombre"><input type="text" name="nombre"></span>
 				<label>Apellidos:</label>
 					<input type="text" name="apellidos">
-				
 				<label>Correo Electronico:</label>
-					<input type="text" name="correo">
-				
+					<span class="Reg_correo"><input type="text" name="correo"></span>
 				<label>Repita Correo Electronico:</label>
-					<input type="text" name="c_correo">
-				
+					<span class="Reg_c_correo"><input type="text" name="c_correo"></span>
 				<label>Contraseña:</label>
 					<input type="password" name="pwd">
-		
 				<label>Repita Contraseña:</label>
 					<input type="password" name="c_pwd">
 				
-				<input type="checkbox" name="condiciones" value="Si">
-				Acepto las condiciones legales <a href="avisolegal.html">AVISO LEGAL </a>
+				<label><input type="checkbox" name="condiciones" value="Si">
+				Acepto las condiciones legales<br> <a href="avisolegal.html">AVISO LEGAL </a></label>
 				
 				<p id="enviar"><input type="submit" value="Enviar"></p>
 				</form>
-			</article>
-	
+
+				</div>
 			</div>
 			
 			
