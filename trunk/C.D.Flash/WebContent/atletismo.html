@@ -1,66 +1,118 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link href="css/estilo.css" rel="stylesheet" type="text/css">
-<meta charset="UTF-8">
-<title>C.D. Flash</title>
-</head>
-<body>
-	<header>
-		<img class="Logo" src="./Img/Logotipo.png" alt="C.D. Flash"/>	
-	</header>
 
+<head>
+	<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	<link href="css/rejilla.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/script.js"></script>
+	<meta charset="UTF-8">
+	<title>C.D. Flash</title>
+</head>
+
+<body>
+	<header class="container_12">
+		<img class="grid_8 prefix_2"src="./Img/Logotipo.png" alt="C.D. Flash"/>	
+		<br class="clear">
+	</header>
+	
+	<!-- Menu Horizontal -->
+	
 	<nav class="MenuHorizontal">
 		<ul>
 			<li><a href="index.html">General</a></li>
 			<li><a href="atletismo.html">Atletismo</a></li>
 			<li><a href="baloncesto.html">Baloncesto</a></li>
-			<li><a href="futbol.html">Futbol</a></li>
-			<li><a href="otros.html">Otros</a></li>
-		
+			<li><a href="futbol.html">Fútbol</a></li>
+			<li><a href="patrocinadores.html">Patrocinadores</a></li>
 		</ul>
 	</nav>
 	
-	<nav>
-		<ul>
-			<li>Noticias</li>
-			<li>Eventos</li>
-			<li>Horarios</li>
-			<li>Contacto</li>
-		</ul>
-	</nav>
+	<br class="clear">
+	<!-- Contenedor del menu vertical y del contenido  -->
+	<div class="container_12 alpha">
+		<div class="grid_9">
+		<!-- Menu Vertical  -->
+				<nav  class="MenuVertical" >
+					<ul>
+						<li> <a href="#" onclick="ocultar();ver('NoticiasA');"> Noticias</a></li>
+						<li> <a href="#" onclick="ocultar();ver('InstalacionesA');">Carreras</a></li>
+						<li> <a href="#" onclick="ocultar();ver('Servicios');">Resultados</a></li>
+						
+					</ul>				
+				</nav>
+			<!-- Contenido del submenu -->
+			<div class="grid_7 push_1" id="NoticiasA">
+			<article><p>La lógica para todas estas instituciones es que la bola que les toque en suerte sea la de uno de los tres equipos que lideran la clasificación de la actual Liga (Barcelona, Madrid o Atlético), aunque el Sant Andreu fue el único que se desmarcó de esta trilogía y opta para que les caiga uno de los equipos andaluces, preferentemente el Betis, descartando de pleno la opción azulgrana.</p>
+					<p>La elección tiene su lógica, ya que estos pertenecen a un barrio de Barcelona y un supuesto enfrentamiento con los azulgranas no tendría el mismo atractivo que si el rival fuesen los béticos, ya que Sant Andreu cuenta entre su población con una importante masa de andaluces.</p>
+			</article>
+			
+			</div>
+			
+			<div class="grid_7 push_1" id="InstalacionesA">
+			<article><p>La lógica para todas estas instituciones es que la bola que les toque en suerte se</p>
+			</article>
 	
-	<p>Ultimas Noticias</p>
-	<div>
-		<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
-	</div>
+			
 	
-	<section>
-		<article>Aquí vendrá toda la infotmación sobre cada menú y submenu de la pagina web </article>		
-	</section>
-	
-	<div>
-		<img src="./Img/cocacola.png" alt="Logo CocaCola"/>
-		<img src="./Img/logopuma.png" alt="Logo Puma"/>
-		<img src="./Img/logovodafone.png" alt="Logo Vodafone"/>
-	</div>
-	<footer>
-		<div>
-			<p>Avenida Carreras Nº1
-			34080-Palencia
-			94 000 00 00 - 94 000 00 01
-			Fax: 94 00 00 02</p>
+			</div>
+			
+			
 		</div>
 		
-		<img src="./Img/lacaixa.png" alt="Logo lacaixa"/>
+		<!-- Contenedor recuadro con scroll  -->
+		<div class="container_12 omega" >
+			<div class="grid_2 push_1">
+				<p id="UltimasNoticias">Ultimas Noticias</p>
+				<!-- Contenido recuadro  -->
+				<div class="cuadro">
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				<p>En este recuadro se añadiran las ultimas noticias y las actualizaciones de la web</p>
+				
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<br class="clear">
+	<br class="clear">
+	
+	<!-- Linea y pie de pagina  -->
+	
+	<div class="Linea"></div>
+	<footer class="container_12 alfa">
+		<div class="grid_4">
+			<p>Avenida Carreras Nº1
+			<br>34080-Palencia
+			<br>94 000 00 00 - 94 000 00 01
+			<br>Fax: 94 00 00 02</p>
+		</div>
 		
-		<div>
+		<img class="grid_3 suffix_2" src="./Img/lacaixa.png" alt="Logo lacaixa"/>
+		
+		<nav id="pie" class="grid_3">
 			<a>Buzón de Sugerencias</a>
 			<a>Aviso Legal</a>
 			<a>Mapa Web</a>
-		</div>
-		
-		<img src="./Img/logofooter.png" alt="Logo Flash Footer"/>
+		</nav>
+
+		<img class="logo" class="grid_1" src="./Img/logofooter.png" alt="Logo Flash Footer"/>
+
 		
 	</footer>
 

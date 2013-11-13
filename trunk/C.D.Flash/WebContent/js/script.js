@@ -4,11 +4,11 @@ var entrada;
 
 function ocultar()
 {
-	document.getElementById("Noticias").style.display="none";
-	document.getElementById("Instalaciones").style.display="none";
-	document.getElementById("Servicios").style.display="none";
-	document.getElementById("Contacto").style.display="none";
-	document.getElementById("Registro").style.display="none";
+	document.getElementById("Opcion1").style.display="none";
+	document.getElementById("Opcion2").style.display="none";
+	document.getElementById("Opcion3").style.display="none";
+	document.getElementById("Opcion4").style.display="none";
+	document.getElementById("Opcion5").style.display="none";
 	
 }
 
@@ -16,4 +16,9 @@ function ver(entrada)
 {
 	document.getElementById(entrada).style.display="inline-block";
 
+}
+
+function validar(){
+	
+	
 }
