@@ -89,9 +89,8 @@ outline-offset: 6px;
 }
 
 .Linea{
-	border-style:solid;
-	border-width:1px;
-	border-color:#FD2526;
+	height:2px;
+	background-color:#FD2526;
 
 }
 
