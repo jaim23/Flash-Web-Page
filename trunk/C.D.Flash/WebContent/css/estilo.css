@@ -12,6 +12,7 @@ a{
 a:hover{
 	color:#FEEFEF;
 }
+
 ul{
 list-style:none;
 }
@@ -101,11 +102,17 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
 	color:#FD2526;
 }
 
-label {
+.formulario_reg label{
 	
-display:block;
-margin: 1em 0 0 0;
-	
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    width: 200px;
 }
 
-
+.formulario_reg li{
+	
+    padding:12px;
+    border-bottom:1px solid #eee;
+    position:relative;
+}
