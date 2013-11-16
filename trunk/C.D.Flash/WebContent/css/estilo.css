@@ -15,9 +15,13 @@ a:hover{
 ul{
 list-style:none;
 }
-header{box-shadow:inset 0px 0px 57px #ffff00;}
+header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
 
-article{border:inset 1px #e0c9c9;}
+article{outline-style:groove;
+outline-width:3px;
+outline-color: #undefined;
+outline-offset: 6px;
+}
 
 .MenuHorizontal {
 	
@@ -65,7 +69,6 @@ article{border:inset 1px #e0c9c9;}
 	text-align:center;
 	font-size:30px;
 	font-weight:bold;
-	text-shadow:0px 0px 50px #ffff00;
 	
 }
 
