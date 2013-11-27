@@ -78,27 +78,38 @@
 			<div class="grid_7 push_1" id="Opcion4">
 				<div class="titulos">Contacto</div>
 				<br>
-				<article><p>Pulse aqui para mandarnos un email</p>
-				<a>href="mailto:davinutor@gmail.com"</a>
-				</article>
+				<br>
+				
+				<form class='formulario_reg'>
+				<ul>
+            		<li><label>Nombre *:</label>
+            			<span><input type='text' placeholder="Nombre y Apellidos"></span></li>
+            		<li><label>Email *:</label>
+            			<span><input type='text' placeholder="email@ejemplo.com"></span></li>
+            		<li><label>Mensaje *:</label>
+            			<span><textarea rows="6" placeholder="Mensaje"></textarea></span></li>
+            	</ul>
+            		<input class="enviar" type='submit' value='Enviar'>
+        		</form>
 		
 			</div>
 			<div class="grid_7 push_1" id="Opcion5">
-				<div class="titulos">Registro</div><br>
+				<div class="titulos">Registro</div>
+				<br>
 				<br>
 					
 					<form class="formulario_reg" name="registro" action="#" onsubmit="return validar();" method="post" >
 					<ul>
-						<li><label>Nombre:</label>
-							<span class="Reg_nombre"><input type="text" name="nombre"></span></li>
-						<li><label>Apellidos:</label>
-							<input type="text" name="apellidos"></li>
-						<li><label>E-mail:</label>
-							<span class="Reg_correo"><input type="text" name="correo"></span></li>
-						<li><label>Contraseña:</label>
-							<input type="password" name="pwd"></li>
-						<li><label>Repita Contraseña:</label>
-							<input type="password" name="c_pwd"></li>
+						<li><label>Nombre *:</label>
+							<span class="Reg_nombre"><input type="text" name="nombre" placeholder="Nombre"></span></li>
+						<li><label>Apellidos *:</label>
+							<input type="text" name="apellidos" placeholder="Apellidos"></li>
+						<li><label>E-mail *:</label>
+							<span class="Reg_correo"><input type="text" name="correo" placeholder="email@ejemplo.com"></span></li>
+						<li><label>Contraseña *:</label>
+							<input type="password" name="pwd" placeholder="**********"></li>
+						<li><label>Repita Contraseña *:</label>
+							<input type="password" name="c_pwd" placeholder="**********"></li>
 						<li><label><input type="checkbox" name="condiciones" value="Si">
 						Acepto las condiciones legales 
 						<a id="av" href="avisolegal.html">AVISO LEGAL </a></label></li>	
