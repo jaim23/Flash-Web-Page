@@ -110,6 +110,8 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
 	color:#FD2526;
 }
 
+/*--- Formulario --*/
+
 .formulario_reg label{
 	
     display: inline-block;
@@ -124,9 +126,9 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
     position:relative;
 }
 
-input{background-color:#FEEFEF;}
-input:hover{border-color:#FFFF00;}
-input:focus{border-color:#FD2526;}
+textarea,input{background-color:#FEEFEF;}
+textarea:hover,input:hover{border-color:#FFFF00;}
+textarea:focus,input:focus{border-color:#FD2526;}
 
 .enviar {
 	background-color:#FD2526;
