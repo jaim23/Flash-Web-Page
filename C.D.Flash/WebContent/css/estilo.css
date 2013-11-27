@@ -115,23 +115,30 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
     display: inline-block;
     float: left;
     font-weight: bold;
-    width: 200px;
+    width: 230px;
 }
 
 .formulario_reg li{
 	
     padding:12px;
-    border-bottom:1px solid #eee;
     position:relative;
 }
 
-#enviar{
+.enviar {
+	background-color:#FD2526;
+	color:#ffff00;
     width:85px;
     height:35px;
     border:none;
-    margin-top:20px;
+    margin-top:50px;
     cursor:pointer;
-
 }
+
+.enviar:hover{
+		background-color:#ffff00;
+		color:#FD2526;
+}
+
+#av{color:#FD2526;}
 
 
