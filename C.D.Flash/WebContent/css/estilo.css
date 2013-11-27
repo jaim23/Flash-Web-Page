@@ -124,6 +124,10 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
     position:relative;
 }
 
+input{background-color:#FEEFEF;}
+input:hover{border-color:#FFFF00;}
+input:focus{border-color:#FD2526;}
+
 .enviar {
 	background-color:#FD2526;
 	color:#ffff00;
