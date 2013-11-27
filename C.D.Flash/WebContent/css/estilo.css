@@ -3,6 +3,8 @@
 body{
 	
 	background-color:#FEEFEF;
+	text-align:justify;
+	background-image: url(../Img/sprinkles.png);
 }
 a{
 	color:#FFFF00;
@@ -27,7 +29,7 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
 	font-size:20px;
 	padding-bottom:28px;
 	box-shadow: 0px 0px 750px #ffff00;	
-
+	
 }
 .MenuHorizontal li{
 	
@@ -80,20 +82,26 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
 	
 	text-align:center;
 	font-weight:bold;
-	
+	font-style:italic;
+	text-decoration:underline;
+	color:#FD2526;
+
 }
 
 .cuadro{
-	border-style:groove;
-	border-width:1px;
-	border-color:#FD2526;
-	background-color:#FFFFFF;
 	overflow-y:scroll;
 	height:500px;
+	border-style:inset; 
+	border-width:1;
+	border-color:#FD2526;
+	padding-left:10px;
+	padding-right:10px;
+	font-size:12px;
+	background-image: url(../Img/cuadricula.png);
 }
 
 .Linea{
-	height:2px;
+	height:3px;
 	background-color:#FD2526;
 
 }
@@ -104,11 +112,14 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
 
 #pie a{
 	color:#000000;
+	font-size:16px;
 }
 
 #pie a:hover{
 	color:#FD2526;
 }
+
+footer{font-size:11px;}
 
 /*--- Formulario --*/
 
@@ -126,7 +137,11 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
     position:relative;
 }
 
-textarea,input{background-color:#FEEFEF;}
+textarea,input{
+border-style:inset; 
+border-width:1,5;
+background-color:#FEEFEF;
+}
 textarea:hover,input:hover{border-color:#FFFF00;}
 textarea:focus,input:focus{border-color:#FD2526;}
 
@@ -138,6 +153,7 @@ textarea:focus,input:focus{border-color:#FD2526;}
     border:none;
     margin-top:50px;
     cursor:pointer;
+    float:right;
 }
 
 .enviar:hover{
@@ -146,5 +162,6 @@ textarea:focus,input:focus{border-color:#FD2526;}
 }
 
 #av{color:#FD2526;}
-
-
+table{margin: 0 auto;}
+table,th,td{border:1px solid #FD2526;}
+.centro{text-align:center;}

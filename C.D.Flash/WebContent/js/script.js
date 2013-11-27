@@ -18,6 +18,7 @@ function ver(entrada)
 
 }
 
+
 function validar(){
 	
 	var x=document.forms["registro"]["nombre"].value;
