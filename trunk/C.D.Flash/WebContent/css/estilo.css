@@ -1,7 +1,26 @@
 @CHARSET "UTF-8";
 
-body{
+
+@media (min-width: 1024px) and (max-width: 1279px){
+
+.MenuHorizontal li{
 	
+	text-indent:30px;
+	text-align:center;
+}
+}
+
+@media(min-width: 1280px){
+
+.MenuHorizontal li{
+	
+	text-indent:100px;
+	
+}
+}
+
+
+body{
 	background-color:#FEEFEF;
 	text-align:justify;
 	background-image: url(../Img/sprinkles.png);
@@ -35,7 +54,7 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
 	
 	display: inline-block;
 	float:left;
-	text-indent:100px;
+	/*text-indent:100px;*/
 	margin-top:-6px;
 	margin-left:50px;
 }
@@ -57,6 +76,7 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
 	box-shadow: 0px 0px 50px #ffff00;
 	cursor:pointer;
 }
+
 
 .MenuVertical li{
 	color:#FFFF00;
