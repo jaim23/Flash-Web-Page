@@ -37,7 +37,7 @@ body{font-size:15px;}
 	font-size:20px;
 	display: inline-block;
 }
-img{width:60%; height:60%;}
+img{width:50%; height:50%;}
 .MenuVertical {
 	height:130px;
 	width:130px;
@@ -51,7 +51,6 @@ img{width:60%; height:60%;}
 .cuadro{width:120px;}
 .logo{width:50px; height:50px;}
 header{text-align:center;}
-
 }
 @media (min-width: 1024px) and (max-width: 1278px){
 .cuadro{width:200px;}
@@ -188,7 +187,6 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
 
 #pie a{
 	color:#000000;
-	font-size:16px;
 }
 
 #pie a:hover{
