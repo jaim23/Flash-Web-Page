@@ -86,14 +86,14 @@
 				<br>
 				<br>
 				
-				<form class='formulario_reg'>
+				<form class='formulario_reg' name="contacto" onsubmit="return validar_mensaje();">
 				<ul>
             		<li><label>Nombre *:</label>
-            			<span><input type='text' placeholder="Nombre y Apellidos"></span></li>
+            			<span><input type='text' name="nombre" placeholder="Nombre y Apellidos"></span></li>
             		<li><label>Email *:</label>
-            			<span><input type='text' placeholder="email@ejemplo.com"></span></li>
+            			<span><input type='text' name="correo" placeholder="email@ejemplo.com"></span></li>
             		<li><label>Mensaje *:</label>
-            			<span><textarea rows="6" placeholder="Mensaje"></textarea></span></li>
+            			<span><textarea rows="6" name="mensaje" placeholder="Mensaje"></textarea></span></li>
             	</ul>
             		<input class="enviar" type='submit' value='Enviar'>
         		</form>
@@ -163,9 +163,9 @@
 		<img class="grid_3 suffix_2" src="./Img/lacaixa.png" alt="Logo lacaixa"/>
 		
 		<nav id="pie" class="grid_3">
-			<a>Buzón de Sugerencias</a>
+			<a href="proximo.html">Buzón de Sugerencias</a>
 			<a href="avisolegal.html" target="_blank">Aviso Legal</a>
-			<a>Mapa Web</a>
+			<a href="proximo.html">Mapa Web</a>
 		</nav>
 
 		<img class="logo" class="grid_1" src="./Img/logofooter.png" alt="Logo Flash Footer"/>
