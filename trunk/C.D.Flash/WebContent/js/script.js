@@ -112,9 +112,9 @@ function validar(){
 	  return false;
 	}
 	
-	var av = document.registro.condiciones[0].checked;
+	var av = document.forms["registro"]["condiciones"].checked;
 	if( av == false){
-		alert("TIO EL AVISO LEGAL");
+		alert("Debes Leer y Aceptar el aviso legal");
 		return false;
 	}
 	
