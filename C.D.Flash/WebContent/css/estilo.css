@@ -167,7 +167,7 @@ header{box-shadow:inset 0px 0px 75px #ffff00,0px 0px 75px #ffff00;}
 	overflow-y:scroll;
 	height:500px;
 	border-style:inset; 
-	border-width:1;
+	border-width:3px;
 	border-color:#FD2526;
 	padding-left:10px;
 	padding-right:10px;
@@ -213,7 +213,7 @@ footer{font-size:11px;}
 
 textarea,input{
 border-style:inset; 
-border-width:1,5;
+border-width:2px;
 background-color:#FEEFEF;
 }
 textarea:hover,input:hover{border-color:#FFFF00;}
