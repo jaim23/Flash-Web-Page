@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+	<meta charset="UTF-8">
 	<link href="css/estilo.css" rel="stylesheet" type="text/css">
 	<link href="css/rejillamovil.css"  media="screen and (min-width: 640px) and (max-width: 1000px)" rel="stylesheet" type="text/css">
 	<link href="css/rejilla.css"  media="screen and (min-width: 1280px)" rel="stylesheet" type="text/css">
 	<link href="css/rejilla1024.css"  media="screen and (min-width: 1024px) and (max-width: 1279px)" rel="stylesheet" type="text/css">
 	
 	<script type="text/javascript" src="js/script.js"></script>
-	<meta charset="UTF-8">
 	<link rel="shortcut icon" href="./Img/favicon.ico" >
 	<link rel="icon" type="image/gif" href="./Img/animated_favicon1.gif" >
 	<title>C.D. Flash</title>
@@ -96,12 +96,12 @@
 				
 				<form class='formulario_reg' name="contacto" onsubmit="return validar_mensaje();">
 				<ul>
-            		<li><label>Nombre *:</label>
-            			<span><input type='text' name="nombre" placeholder="Nombre y Apellidos"></span></li>
-            		<li><label>Email *:</label>
-            			<span><input type='text' name="correo" placeholder="email@ejemplo.com"></span></li>
-            		<li><label>Mensaje *:</label>
-            			<span><textarea rows="6" name="mensaje" placeholder="Mensaje"></textarea></span></li>
+            		<li><label for="Nomb">Nombre *:</label>
+            			<span><input type='text' id="Nomb" name="nombre" placeholder="Nombre y Apellidos"></span></li>
+            		<li><label for="Email">Email *:</label>
+            			<span><input type='text' id="Email" name="correo" placeholder="email@ejemplo.com"></span></li>
+            		<li><label for="Mens">Mensaje *:</label>
+            			<span><textarea rows="6" id="Mens" name="mensaje" placeholder="Mensaje"></textarea></span></li>
             	</ul>
             		<input class="enviar" type='submit' value='Enviar'>
         		</form>
@@ -113,17 +113,17 @@
 					
 					<form class="formulario_reg" name="registro" action="#" onsubmit="return validar();" method="post" >
 					<ul>
-						<li><label>Nombre *:</label>
-							<span class="Reg_nombre"><input type="text" name="nombre" placeholder="Nombre"></span></li>
-						<li><label>Apellidos *:</label>
-							<input type="text" name="apellidos" placeholder="Apellidos"></li>
-						<li><label>E-mail *:</label>
-							<span class="Reg_correo"><input type="text" name="correo" placeholder="email@ejemplo.com"></span></li>
-						<li><label>Contraseña *:</label>
-							<input type="password" name="pwd" placeholder="**********"></li>
-						<li><label>Repita Contraseña *:</label>
-							<input type="password" name="c_pwd" placeholder="**********"></li>
-						<li><label><input type="checkbox" name="condiciones" value="Si">
+						<li><label for="Nombre">Nombre *:</label>
+							<span class="Reg_nombre"><input type="text" id="Nombre" name="nombre" placeholder="Nombre"></span></li>
+						<li><label for="Apll">Apellidos *:</label>
+							<input type="text" id="Apll" name="apellidos" placeholder="Apellidos"></li>
+						<li><label for="E-Mail">E-mail *:</label>
+							<span class="Reg_correo"><input type="text" id="E-Mail" name="correo" placeholder="email@ejemplo.com"></span></li>
+						<li><label for="Cont" >Contraseña *:</label>
+							<input type="password" id="Cont" name="pwd" placeholder="**********"></li>
+						<li><label for="RCont">Repita Contraseña *:</label>
+							<input type="password" id="RCont" name="c_pwd" placeholder="**********"></li>
+						<li><label for="Caja"><input type="checkbox" id="Caja" name="condiciones" value="Si">
 						Acepto las condiciones legales 
 						<a id="av" href="avisolegal.html">AVISO LEGAL </a></label></li>	
 					</ul>
@@ -186,7 +186,14 @@
 		</nav>
 
 		<img class="logo" src="./Img/logofooter.png" alt="Logo Flash Footer"/>
+		<br/>
+		<p>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+		<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="¡CSS Válido!" />
+		</a>
+		</p>
 
+     
 		
 	</footer>
 
