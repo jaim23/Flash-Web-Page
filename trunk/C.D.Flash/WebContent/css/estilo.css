@@ -1,5 +1,5 @@
 
-/*Media Queries -- Damos Formato para pantallas de moviles pequeÃ±os(Menos de 630px)*/
+/*Media Queries -- Damos formato para pantallas de móviles pequenos(Menos de 630px)*/
 @media(max-width: 630px){
 	body{font-size:15px;}
 	.MenuHorizontal li{
@@ -29,7 +29,7 @@
 	.logo{width:50px; height:50px;}
 	table{font-size:90%;}
 }
-/*Media Queries -- Damos Formato para pantallas de moviles con pantalla mas grande(640-1000px)*/
+/*Media Queries -- Damos formato para pantallas de móviles con pantalla más grande(640-1000px)*/
 @media (min-width: 640px) and (max-width: 1000px){
 	body{font-size:15px;}
 	.MenuHorizontal li{
@@ -54,7 +54,7 @@
 	header{text-align:center;}
 	table{font-size:80%;}
 }
-/*Media Queries -- Damos Formato para pantallas de potatiles pequeÃ±os o tablets(1024-1278px)*/
+/*Media Queries -- Damos formato para pantallas de portátiles pequenos o tablets(1024-1278px)*/
 @media (min-width: 1024px) and (max-width: 1278px){
 	.cuadro{width:200px;}
 	.MenuHorizontal li{
@@ -86,7 +86,7 @@
 	}
 }
 
-/*Estilos Generales segÃºn la etiqueta*/
+/*Estilos Generales según la etiqueta*/
 
 body{
 	background-color:#FEEFEF;
@@ -122,7 +122,7 @@ table{margin: 0 auto;
 }
 table,th,td{border:1px solid #FD2526;}
 
-/*Estilos Generales segÃºn la clase*/
+/*Estilos Generales según la clase*/
 
 	/*Centrado de letras*/
 .centro{text-align:center;}
@@ -175,7 +175,7 @@ table,th,td{border:1px solid #FD2526;}
 	font-weight:bold;
 	
 }
-	/*Cuadro de Ãšltimas Noticias*/
+	/*Cuadro de Últimas Noticias*/
 .cuadro{
 	overflow-y:scroll;
 	height:500px;
@@ -220,7 +220,7 @@ table,th,td{border:1px solid #FD2526;}
 		color:#FD2526;
 }
 
-	/*LÃ­nea de final de pagina */
+	/*Linea de final de página */
 .Linea{
 	height:3px;
 	background-color:#FD2526;
@@ -233,7 +233,7 @@ table,th,td{border:1px solid #FD2526;}
 .ganador{background-color:#48FF1F;}
 .empate{background-color:#FFDF67;}
 
-/*Estilos Generales segÃºn ID*/
+/*Estilos Generales según ID*/
 
 	/*Ocultamos las categorÃ­as no seleccionadas*/
 #Opcion2, #Opcion3, #Opcion4, #Opcion5 {
@@ -251,7 +251,7 @@ table,th,td{border:1px solid #FD2526;}
 
 }
 
-	/*Estiilo especial para los links del pie de pagina*/
+	/*Estilo especial para los links del pie de página*/
 #pie a{
 	color:#000000;
 }
