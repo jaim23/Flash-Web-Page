@@ -80,7 +80,7 @@
 			<div class="grid_7 push_1" id="Opcion3">
 		    <div class="titulos">Calcula tu Media</div>
 			<br><hr class="Linea"/>
-		  		<select id="selectBox" onchange="changeFunc()">
+		  		<select id="selectBox" onchange="changeFunc();">
 		   			<option value="0" selected="selected">Elige una opción...</option>
 		   			<option value="1">Consultar un puesto</option>
 		   			<option value="2">Insertar nuevo puesto</option>
@@ -93,7 +93,19 @@
 				<td><input id="txISBN" type="text" required="required" placeholder="ISBN"  /></td>
 				</tr>
 				</table>
-		  		
+		  		<table id= "table" style="display:none;">
+				<tr>
+					<td><input id="txtISBN" type="text" required="required" placeholder="ISBN"  /></td>
+					<td><input id="txtTitle" type="text" required="required" placeholder="Título"  /></td>
+					<td><input id="txtAuthor" type="text" required="required" placeholder="Autor"  /></td>
+					</tr>
+				</table>
+				<p id="SendButton" style= "display:none;">
+					<input id="send" type= "button" value="Enviar datos" />
+				</p>
+				<p>
+					<input type= "button" value="Ver Libros" onclick="mostrar()"/>
+				</p>
 					<div id="Resultado">
 					</div>
 	
