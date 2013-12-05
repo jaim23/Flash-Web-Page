@@ -32,3 +32,41 @@ function getCorredor(){
 		}
 	});
 }
+
+
+function changeFunc() {
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    if (selectedValue== 1){
+    	document.getElementById("SendButton").style.display="block";
+    	document.getElementById("table").style.display="none";
+    	document.getElementById("tableISBN").style.display="block";
+    	$("#send").attr("onClick","consultar()");
+    	$('#txISBN').val("");
+    }
+    if (selectedValue== 2){
+    	document.getElementById("SendButton").style.display="block";
+    	document.getElementById("tableISBN").style.display="none";
+    	document.getElementById("table").style.display="block";
+    	$("#send").attr("onClick","anadir()");    
+    	$('#txtISBN').val("");
+    	$('#txtTitle').val("");
+    	$('#txtAuthor').val("");
+    }
+    if (selectedValue== 3){
+    	document.getElementById("SendButton").style.display="block";
+    	document.getElementById("table").style.display="block";
+    	document.getElementById("tableISBN").style.display="none";
+    	$("#send").attr("onClick","modificar()");   
+    	$('#txtISBN').val("");
+    	$('#txtTitle').val("");
+    	$('#txtAuthor').val("");
+    }
+    if (selectedValue== 4){
+    	document.getElementById("SendButton").style.display="block";
+    	document.getElementById("tableISBN").style.display="block";
+    	document.getElementById("table").style.display="none";
+    	$("#send").attr("onClick","borrar()");
+    	$('#txISBN').val("");
+    }
+}
