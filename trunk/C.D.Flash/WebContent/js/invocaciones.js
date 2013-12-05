@@ -16,12 +16,19 @@ function insertar(){
 
 
 function getCorredor(){
+	var Pos = document.getElementById("Pos");
+	url:"http://localhost:8082/flash/buscar/"+Pos.value;
 	$.ajax({
-		var Pos = document.getElementById("Pos");
 		type:"GET",
-		dataType:"json",
-		url:"http://localhost:8082/flash/buscar",
-		var res=data.nombre + data.metros + data.tiempo,
-		success: function(data){ $("#Consulta").html("<p>"+ res +"</p>");}
+		dataType:"xml",
+		success:function(data){
+			var $XML=$(data);
+			var nombre=$XML.find('nombre').text();
+			var tiempo=$XML.find('tiempo').text();
+			var metros=$XML.find('metros').text();
+			var page=("<p>"+nombre+tiempo+metros+"</p>");
+			var corredor=document.getElementById("Resultado");
+			corredor.innerHTML=page;
+		}
 	});
 }
