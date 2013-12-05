@@ -80,7 +80,7 @@
 			<form class="formulario_reg" name="registro" action="#" method="post" >
 					<ul>
 						<li><label for="Horas">Tiempo:</label>
-							<span class="Reg_nombre"><input type="text" id="Hora" name="Hora" placeholder="00h"></span></li>
+							<span class="Reg_nombre"><input type="text" id="Pos" name="Hora" placeholder="00h"></span></li>
 						<li><label for="Minutos">Minutos:</label>
 							<input type="text" id="Minutos" name="Minutos" placeholder="00m"></li>
 						<li><label for="Segundos">Segundos:</label>
@@ -88,9 +88,11 @@
 						<li><label for="m" >Metros Recorridos:</label>
 							<input type="password" id="m" name="m" placeholder="00.000m"></li>
 					</ul>
-						<input class="enviar" type="submit" value="Calcular">
-
+						<input class="enviar" type="submit" value="Calcular" onclick="getCorredor();">
+					
 					</form>
+					<div id="Resultado">
+					</div>
 	
 			</div>
 			
