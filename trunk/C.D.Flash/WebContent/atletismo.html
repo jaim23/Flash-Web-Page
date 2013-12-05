@@ -41,7 +41,7 @@
 					<ul>
 						<li onclick="ocultar(3);ver('Opcion1');">Noticias</li>
 						<li onclick="ocultar(3);ver('Opcion2');">Carreras</li>
-						<li onclick="ocultar(3);ver('Opcion3');">Resultados</li>
+						<li onclick="ocultar(3);ver('Opcion3');">Media KM</li>
 						
 					</ul>				
 				</nav>
@@ -75,18 +75,22 @@
 			</div>
 			
 			<div class="grid_7 push_1" id="Opcion3">
-		    <div class="titulos">Resultados</div>
+		    <div class="titulos">Calcula tu Media</div>
 			<br><hr class="Linea"/>
-				<article><p>XXVI Carrera Urbana Rafael del Riego-SEVILLA</p>
-					<p>X Carrera Popular la Reyerta-CHIPIONA</p>
-					<p>XII Maraton Alpino Jarapalos- CTº Andalucia individual y Clubes</p>
-					<p>XIV Carrera Popular Puerta de Doñana-SANLUCAR DE BARRAMEDA</p>
-					<p>XXXIV Carrera Popular Villa de Grazalema-GRAZALEMA</p>
-					<p>I Media Maraton Ciudad de Algeciras-ALGECIRAS</p>
-					<p>II Trail Pirata-JEREZ</p>
-					<p>XV Media Maraton Tierra y Olivo-DOS HERMANAS</p>
-					<p>IV Milla Marinera Puertorrealeña-PUERTO REAL</p>
-				</article>
+			<form class="formulario_reg" name="registro" action="#" method="post" >
+					<ul>
+						<li><label for="Horas">Tiempo:</label>
+							<span class="Reg_nombre"><input type="text" id="Hora" name="Hora" placeholder="00h"></span></li>
+						<li><label for="Minutos">Minutos:</label>
+							<input type="text" id="Minutos" name="Minutos" placeholder="00m"></li>
+						<li><label for="Segundos">Segundos:</label>
+							<span class="Segundos"><input type="text" id="Segundos" name="Segundos" placeholder="00s"></span></li>
+						<li><label for="m" >Metros Recorridos:</label>
+							<input type="password" id="m" name="m" placeholder="00.000m"></li>
+					</ul>
+						<input class="enviar" type="submit" value="Calcular">
+
+					</form>
 	
 			</div>
 			
