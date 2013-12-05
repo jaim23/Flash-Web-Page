@@ -17,7 +17,7 @@ function insertar(){
 
 function getCorredor(){
 	var Pos = document.getElementById("Pos");
-	url:"http://localhost:8082/flash/buscar/"+Pos.value;
+	url:"http://localhost:8082/servidorFlash/Flash/buscar/"+Pos.value;
 	$.ajax({
 		type:"GET",
 		dataType:"xml",
