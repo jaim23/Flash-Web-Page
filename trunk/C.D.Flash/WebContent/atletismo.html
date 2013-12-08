@@ -80,7 +80,7 @@
 			<div class="grid_7 push_1" id="Opcion3">
 		    <div class="titulos">Calcula tu Media</div>
 			<br><hr class="Linea"/>
-		  		<select id="selectBox" onchange="changeFunc();">
+		  		<label for="selectBox">Selecciona: </label><select id="selectBox" onchange="changeFunc();">
 		   			<option value="0" selected="selected">Elige una opción...</option>
 		   			<option value="1">Consultar un puesto</option>
 		   			<option value="2">Insertar nuevo puesto</option>
@@ -90,14 +90,14 @@
 		  		
 		  		<table id= "tablePos" style="display:none;">
 				<tr>
-				<td><input id="txPos" type="text" required="required" placeholder="Posicion"  /></td>
+				<td><label for="txPos">Posicion: </label><input id="txPos" type="text" required="required" name="posicion" placeholder="Posicion"  /></td>
 				</tr>
 				</table>
 		  		<table id= "table" style="display:none;">
 				<tr>
-					<td><input id="txtNombre" type="text" required="required" placeholder="Nombre"  /></td>
-					<td><input id="txtTiempo" type="text" required="required" placeholder="Tiempo"  /></td>
-					<td><input id="txtMetros" type="text" required="required" placeholder="Metros"  /></td>
+					<td><label for="txtNombre">Nombre: </label><input id="txtNombre" type="text" required="required" name="nombre" placeholder="Nombre"  /></td>
+					<td><label for="txtTiempo">Tiempo: </label><input id="txtTiempo" type="text" required="required" name="tiempo" placeholder="Tiempo"  /></td>
+					<td><label for="txtMetros">Metros: </label><input id="txtMetros" type="text" required="required" name="metros" placeholder="Metros"  /></td>
 					</tr>
 				</table>
 				<p id="SendButton" style= "display:none;">
