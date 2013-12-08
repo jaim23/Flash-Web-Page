@@ -88,23 +88,23 @@
 		   			<option value="4">Eliminar un puesto</option>
 		  		</select>
 		  		
-		  		<table id= "tableISBN" style="display:none;">
+		  		<table id= "tablePos" style="display:none;">
 				<tr>
-				<td><input id="txISBN" type="text" required="required" placeholder="ISBN"  /></td>
+				<td><input id="txPos" type="text" required="required" placeholder="Posicion"  /></td>
 				</tr>
 				</table>
 		  		<table id= "table" style="display:none;">
 				<tr>
-					<td><input id="txtISBN" type="text" required="required" placeholder="ISBN"  /></td>
-					<td><input id="txtTitle" type="text" required="required" placeholder="Título"  /></td>
-					<td><input id="txtAuthor" type="text" required="required" placeholder="Autor"  /></td>
+					<td><input id="txtNombre" type="text" required="required" placeholder="Nombre"  /></td>
+					<td><input id="txtTiempo" type="text" required="required" placeholder="Tiempo"  /></td>
+					<td><input id="txtMetros" type="text" required="required" placeholder="Metros"  /></td>
 					</tr>
 				</table>
 				<p id="SendButton" style= "display:none;">
-					<input id="send" type= "button" value="Enviar datos" />
+					<input id="send" type= "button" value="Consultar" onclick="getCorredor()"/>
 				</p>
 				<p>
-					<input type= "button" value="Ver Libros" onclick="mostrar()"/>
+					<input type= "button" value="Ver Todo" onclick="mostrar()"/>
 				</p>
 					<div id="Resultado">
 					</div>

@@ -40,33 +40,33 @@ function changeFunc() {
     if (selectedValue== 1){
     	document.getElementById("SendButton").style.display="block";
     	document.getElementById("table").style.display="none";
-    	document.getElementById("tableISBN").style.display="block";
+    	document.getElementById("tablePos").style.display="block";
     	$("#send").attr("onClick","consultar()");
-    	$('#txISBN').val("");
+    	$('#txPos').val("");
     }
     if (selectedValue== 2){
     	document.getElementById("SendButton").style.display="block";
-    	document.getElementById("tableISBN").style.display="none";
+    	document.getElementById("tablePos").style.display="none";
     	document.getElementById("table").style.display="block";
     	$("#send").attr("onClick","anadir()");    
-    	$('#txtISBN').val("");
-    	$('#txtTitle').val("");
-    	$('#txtAuthor').val("");
+    	$('#txtNombre').val("");
+    	$('#txtTiempo').val("");
+    	$('#txtMetros').val("");
     }
     if (selectedValue== 3){
     	document.getElementById("SendButton").style.display="block";
     	document.getElementById("table").style.display="block";
-    	document.getElementById("tableISBN").style.display="none";
+    	document.getElementById("tablePos").style.display="none";
     	$("#send").attr("onClick","modificar()");   
-    	$('#txtISBN').val("");
-    	$('#txtTitle').val("");
-    	$('#txtAuthor').val("");
+    	$('#txtPos').val("");
+    	$('#txtNombre').val("");
+    	$('#txtMetros').val("");
     }
     if (selectedValue== 4){
     	document.getElementById("SendButton").style.display="block";
-    	document.getElementById("tableISBN").style.display="block";
+    	document.getElementById("tablePos").style.display="block";
     	document.getElementById("table").style.display="none";
     	$("#send").attr("onClick","borrar()");
-    	$('#txISBN').val("");
+    	$('#txPos').val("");
     }
 }
