@@ -18,6 +18,43 @@ function ver(entrada)
 
 }
 
+function changeFunc() {
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    if (selectedValue== 1){
+    	document.getElementById("SendButton").style.display="block";
+    	document.getElementById("table").style.display="none";
+    	document.getElementById("tablePos").style.display="block";
+    	$("#send").attr("onClick","consultar()");
+    	$('#txPos').val("");
+    }
+    if (selectedValue== 2){
+    	document.getElementById("SendButton").style.display="block";
+    	document.getElementById("tablePos").style.display="none";
+    	document.getElementById("table").style.display="block";
+    	$("#send").attr("onClick","anadir()");    
+    	$('#txtNombre').val("");
+    	$('#txtTiempo').val("");
+    	$('#txtMetros').val("");
+    }
+    if (selectedValue== 3){
+    	document.getElementById("SendButton").style.display="block";
+    	document.getElementById("table").style.display="block";
+    	document.getElementById("tablePos").style.display="none";
+    	$("#send").attr("onClick","modificar()");   
+    	$('#txtPos').val("");
+    	$('#txtNombre').val("");
+    	$('#txtMetros').val("");
+    }
+    if (selectedValue== 4){
+    	document.getElementById("SendButton").style.display="block";
+    	document.getElementById("tablePos").style.display="block";
+    	document.getElementById("table").style.display="none";
+    	$("#send").attr("onClick","borrar()");
+    	$('#txPos').val("");
+    }
+}
+
 function validar_mensaje(){
 	var x=document.forms["contacto"]["nombre"].value;
 	if (x==null || x=="")
@@ -43,6 +80,7 @@ function validar_mensaje(){
 	}
 	
 }
+
 
 function validar(){
 	
