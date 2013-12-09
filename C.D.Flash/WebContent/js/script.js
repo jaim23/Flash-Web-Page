@@ -22,7 +22,7 @@ function validar_mensaje(){
 	var x=document.forms["contacto"]["nombre"].value;
 	if (x==null || x=="")
 	{
-	  alert("Campo Nombre no puede estar vacio");
+	  alert("Campo Nombre no puede estar vacío");
 	  return false;
 	}
 	
@@ -31,7 +31,7 @@ function validar_mensaje(){
 	
 	if(correo.test(c)!=true)
 	{
-		alert("Correo No Valido");
+		alert("Correo No Válido");
 		return false;
 	}
 	
@@ -49,14 +49,14 @@ function validar(){
 	var x=document.forms["registro"]["nombre"].value;
 	if (x==null || x=="")
 	{
-	  alert("Campo Nombre no puede estar vacio");
+	  alert("Campo Nombre no puede estar vacío");
 	  return false;
 	}
 	
 	var y=document.forms["registro"]["apellidos"].value;
 	if (y==null || y=="")
 	{
-	  alert("Campo Apellido no puede estar vacio");
+	  alert("Campo Apellido no puede estar vacío");
 	  return false;
 	}
 	var c =document.forms["registro"]["correo"].value;
@@ -64,7 +64,7 @@ function validar(){
 	
 	if(correo.test(c)!=true)
 		{
-			alert("Correo No Valido");
+			alert("Correo No Válido");
 			return false;
 		}
 	
