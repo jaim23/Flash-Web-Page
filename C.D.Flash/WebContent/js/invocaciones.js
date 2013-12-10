@@ -1,12 +1,47 @@
+
+function getCorredor(){
+	var Pos = document.getElementById("txPos").value;
+	var uri="http://localhost:8080/es.uca.vogella/demo/flash/buscar/"+Pos;
+
+	$.ajax({
+		type:"GET",
+		url:uri,
+		dataType:"xml",
+		success: function(data){
+		var $XML=$(data);
+		var nombre = $XML.find('nombre').text();
+		var tiempo = $XML.find('tiempo').text();
+		var metros = $XML.find('metros').text();
+		var page =("<h1>Corredor</h1>" +
+				"<table>" +
+				"<tr>" +
+				"<td><h3>Nombre</h3></td>" +
+				"<td><h3>Tiempo<h3></td>" +
+				"<td><h3>Metros</h3></td>" +
+				"</tr> <tr>" +
+				"<td><p>"+nombre+"</p></td>" +
+				"<td><p>"+tiempo+"</p></td>" +
+				"<td><p>"+metros+"</p></td>" +
+				"</tr></table>");
+		document.getElementById('Resultado').innerHTML=page;
+
+	},
+	error:function(res){
+		alert("Oh no! " + res.statusText);
+		}
+	});
+}
+
 function insertar(){
-	
+
 	$.ajax( {
 		type:"POST",
-		url:"http://localhost:8082/flash/insertar/",
+		url:"http://localhost:8080/es.uca.vogella/demo/flash/insertar/",
 		contentType:"application/json",
-		data:JSON.stringify( {"nombre":$('#CorredorNombre').val(),"metros":$('#Metros').val(),"tiempo":$('#Minutos').val()}),
+		data:JSON.stringify( {"nombre":$('#txtNombre').val(),"metros":$('#txtMetros').val(),"tiempo":$('#txtTiempo').val()}),
 		success:function(res){
-			$("#Consulta").html("<p>"+ res +"</p>");
+			document.getElementById('Resultado').innerHTML=res;
+
 		},
 		error:function(res){
 		alert("Oh no! " + res.statusText);
@@ -14,59 +49,36 @@ function insertar(){
 		});	
 }
 
-
-function getCorredor(){
-	var Pos = document.getElementById("Pos");
-	url:"http://localhost:8082/servidorFlash/Flash/buscar/"+Pos.value;
-	$.ajax({
-		type:"GET",
-		dataType:"xml",
-		success:function(data){
-			var $XML=$(data);
-			var nombre=$XML.find('nombre').text();
-			var tiempo=$XML.find('tiempo').text();
-			var metros=$XML.find('metros').text();
-			var page=("<p>"+nombre+tiempo+metros+"</p>");
-			var corredor=document.getElementById("Resultado");
-			corredor.innerHTML=page;
+function update(){
+	var Pos = document.getElementById("txPos").value;
+	$.ajax( {
+		type:"PUT",
+		url:"http://localhost:8080/es.uca.vogella/demo/flash/actualizar/"+Pos,
+		contentType:"application/json",
+		data:JSON.stringify( {"nombre":$('#txtNombre').val(),"metros":$('#txtMetros').val(),"tiempo":$('#txtTiempo').val()}),
+		success:function(res){
+			document.getElementById('Resultado').innerHTML=res;
+		
+		},
+		error:function(res){
+		alert("Oh no! " + res.statusText);
 		}
-	});
+		});
+	
 }
 
+function borrar(){
+	var Pos = document.getElementById("txISBN").value;
+	var uri="http://localhost:8080/es.uca.vogella/demo/flash/borrar/"+Pos;
+	$.ajax({
+		type: "DELETE",
+		url: uri,
+		success: function(res){
+			document.getElementById('Resultado').innerHTML=res;
 
-function changeFunc() {
-    var selectBox = document.getElementById("selectBox");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    if (selectedValue== 1){
-    	document.getElementById("SendButton").style.display="block";
-    	document.getElementById("table").style.display="none";
-    	document.getElementById("tablePos").style.display="block";
-    	$("#send").attr("onClick","consultar()");
-    	$('#txPos').val("");
-    }
-    if (selectedValue== 2){
-    	document.getElementById("SendButton").style.display="block";
-    	document.getElementById("tablePos").style.display="none";
-    	document.getElementById("table").style.display="block";
-    	$("#send").attr("onClick","anadir()");    
-    	$('#txtNombre').val("");
-    	$('#txtTiempo').val("");
-    	$('#txtMetros').val("");
-    }
-    if (selectedValue== 3){
-    	document.getElementById("SendButton").style.display="block";
-    	document.getElementById("table").style.display="block";
-    	document.getElementById("tablePos").style.display="none";
-    	$("#send").attr("onClick","modificar()");   
-    	$('#txtPos').val("");
-    	$('#txtNombre').val("");
-    	$('#txtMetros').val("");
-    }
-    if (selectedValue== 4){
-    	document.getElementById("SendButton").style.display="block";
-    	document.getElementById("tablePos").style.display="block";
-    	document.getElementById("table").style.display="none";
-    	$("#send").attr("onClick","borrar()");
-    	$('#txPos').val("");
-    }
+		},
+		error:function(res){
+			alert("Oh no! " + res.statusText);
+			}
+		});
 }
