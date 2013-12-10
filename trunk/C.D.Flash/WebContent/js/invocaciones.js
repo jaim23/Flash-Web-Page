@@ -1,6 +1,6 @@
 
 function getCorredor(){
-	var Pos = document.getElementById("txPos").value;
+	var Pos = document.getElementById('txPos').value;
 	var uri="http://localhost:8080/es.uca.vogella/demo/flash/buscar/"+Pos;
 
 	$.ajax({
@@ -50,7 +50,7 @@ function insertar(){
 }
 
 function update(){
-	var Pos = document.getElementById("txPos").value;
+	var Pos = document.getElementById('txPos').value;
 	$.ajax( {
 		type:"PUT",
 		url:"http://localhost:8080/es.uca.vogella/demo/flash/actualizar/"+Pos,
@@ -68,7 +68,7 @@ function update(){
 }
 
 function borrar(){
-	var Pos = document.getElementById("txISBN").value;
+	var Pos = document.getElementById('txPos').value;
 	var uri="http://localhost:8080/es.uca.vogella/demo/flash/borrar/"+Pos;
 	$.ajax({
 		type: "DELETE",
