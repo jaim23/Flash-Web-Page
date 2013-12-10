@@ -25,14 +25,14 @@ function changeFunc() {
     	document.getElementById("SendButton").style.display="block";
     	document.getElementById("table").style.display="none";
     	document.getElementById("tablePos").style.display="block";
-    	$("#send").attr("onClick","consultar()");
+    	$("#send").attr("onClick","getCorredor()");
     	$('#txPos').val("");
     }
     if (selectedValue== 2){
     	document.getElementById("SendButton").style.display="block";
     	document.getElementById("tablePos").style.display="none";
     	document.getElementById("table").style.display="block";
-    	$("#send").attr("onClick","anadir()");    
+    	$("#send").attr("onClick","insertar()");    
     	$('#txtNombre').val("");
     	$('#txtTiempo').val("");
     	$('#txtMetros').val("");
@@ -41,7 +41,7 @@ function changeFunc() {
     	document.getElementById("SendButton").style.display="block";
     	document.getElementById("table").style.display="block";
     	document.getElementById("tablePos").style.display="none";
-    	$("#send").attr("onClick","modificar()");   
+    	$("#send").attr("onClick","update()");   
     	$('#txtPos').val("");
     	$('#txtNombre').val("");
     	$('#txtMetros').val("");
@@ -50,7 +50,7 @@ function changeFunc() {
     	document.getElementById("SendButton").style.display="block";
     	document.getElementById("tablePos").style.display="block";
     	document.getElementById("table").style.display="none";
-    	$("#send").attr("onClick","borrar()");
+    	$("#send").attr("onClick","delete()");
     	$('#txPos').val("");
     }
 }
