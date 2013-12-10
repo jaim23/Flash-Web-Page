@@ -87,7 +87,7 @@
 		   			<option value="3">Modificar un puesto</option>
 		   			<option value="4">Eliminar un puesto</option>
 		  		</select>
-		  		
+		  		<br><br>
 		  		<table id= "tablePos" style="display:none;">
 				<tr>
 				<td><label for="txPos">Posicion: </label><input id="txPos" type="text" required="required" name="posicion" placeholder="Posicion"  /></td>
@@ -96,9 +96,13 @@
 		  		<table id= "table" style="display:none;">
 				<tr>
 					<td><label for="txtNombre">Nombre: </label><input id="txtNombre" type="text" required="required" name="nombre" placeholder="Nombre"  /></td>
+				</tr>
+				<tr>
 					<td><label for="txtTiempo">Tiempo: </label><input id="txtTiempo" type="text" required="required" name="tiempo" placeholder="Tiempo"  /></td>
+				</tr>
+				<tr>	
 					<td><label for="txtMetros">Metros: </label><input id="txtMetros" type="text" required="required" name="metros" placeholder="Metros"  /></td>
-					</tr>
+				</tr>
 				</table>
 				<p id="SendButton" style= "display:none;">
 					<input class="enviar" id="send" type= "button" value="Consultar" onclick="getCorredor()"/>
