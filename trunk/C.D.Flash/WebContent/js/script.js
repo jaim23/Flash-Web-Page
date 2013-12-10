@@ -50,7 +50,7 @@ function changeFunc() {
     	document.getElementById("SendButton").style.display="block";
     	document.getElementById("tablePos").style.display="block";
     	document.getElementById("table").style.display="none";
-    	$("#send").attr("onClick","delete()");
+    	$("#send").attr("onClick","borrar()");
     	$('#txPos').val("");
     }
 }
