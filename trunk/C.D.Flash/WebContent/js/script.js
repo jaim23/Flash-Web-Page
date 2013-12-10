@@ -40,7 +40,7 @@ function changeFunc() {
     if (selectedValue== 3){
     	document.getElementById("SendButton").style.display="block";
     	document.getElementById("table").style.display="block";
-    	document.getElementById("tablePos").style.display="none";
+    	document.getElementById("tablePos").style.display="block";
     	$("#send").attr("onClick","update()");   
     	$('#txtPos').val("");
     	$('#txtNombre').val("");
