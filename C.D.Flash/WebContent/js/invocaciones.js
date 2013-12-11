@@ -9,9 +9,9 @@ function getCorredor(){
 		dataType:"xml",
 		success: function(data){
 		var $XML=$(data);
+		var metros = $XML.find('metros').text();
 		var nombre = $XML.find('nombre').text();
 		var tiempo = $XML.find('tiempo').text();
-		var metros = $XML.find('metros').text();
 		var page =("<h1>Corredor</h1>" +
 				"<table>" +
 				"<tr>" +
@@ -33,10 +33,10 @@ function getCorredor(){
 }
 
 function insertar(){
-
+	var Pos = document.getElementById('txPos').value;
 	$.ajax( {
 		type:"POST",
-		url:"http://localhost:8080/es.uca.vogella/demo/flash/insertar/",
+		url:"http://localhost:8080/es.uca.vogella/demo/flash/insertar/"+Pos,
 		contentType:"application/json",
 		data:JSON.stringify( {"nombre":$('#txtNombre').val(),"metros":$('#txtMetros').val(),"tiempo":$('#txtTiempo').val()}),
 		success:function(res){

@@ -30,7 +30,7 @@ function changeFunc() {
     }
     if (selectedValue== 2){
     	document.getElementById("SendButton").style.display="block";
-    	document.getElementById("tablePos").style.display="none";
+    	document.getElementById("tablePos").style.display="block";
     	document.getElementById("table").style.display="block";
     	$("#send").attr("onClick","insertar()");    
     	$('#txtNombre').val("");
