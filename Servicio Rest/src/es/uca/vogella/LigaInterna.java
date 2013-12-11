@@ -34,6 +34,7 @@ public class LigaInterna {
 	@Produces("text/plain")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public String actualizar(@PathParam("pos")Integer pos, Corredor c){
+		BD.borrar(pos);
 		BD.actualizar(pos,c);
 		return "Actualizado";
 	}
@@ -42,7 +43,7 @@ public class LigaInterna {
 	@DELETE
 	@Path("borrar/{pos}")
 	@Produces("text/plain")
-	public String borrarCorredor(@PathParam("pos") Integer pos){
+	public String borrarCorredor(@PathParam("pos")Integer pos){
 		return BD.borrar(pos);
 	}
 	
