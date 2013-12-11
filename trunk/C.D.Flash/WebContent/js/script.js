@@ -2,7 +2,7 @@
 var entrada;
 var seleccion;
 
-
+/*Función que nos oculta los submenus que no seleccionamos*/
 function ocultar(seleccion)
 {	
 	for(var i = 1 ;i<=seleccion;i++){
@@ -11,13 +11,14 @@ function ocultar(seleccion)
 	
 }
 
-
+/*Función que nos muestra el submenu seleccionado*/
 function ver(entrada)
 {
 	document.getElementById(entrada).style.display="inline-block";
 
 }
 
+/*Función que nos muestra un formulario u otro dependiendo de la selección de la caja*/
 function changeFunc() {
     var selectBox = document.getElementById("selectBox");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
@@ -55,6 +56,7 @@ function changeFunc() {
     }
 }
 
+/*Función para validar los campos del mensaje*/
 function validar_mensaje(){
 	var x=document.forms["contacto"]["nombre"].value;
 	if (x==null || x=="")
@@ -81,7 +83,7 @@ function validar_mensaje(){
 	
 }
 
-
+/*Función que valida los campos del registro*/
 function validar(){
 	
 	var x=document.forms["registro"]["nombre"].value;
