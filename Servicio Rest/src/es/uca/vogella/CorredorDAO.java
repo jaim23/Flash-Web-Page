@@ -4,11 +4,20 @@ package es.uca.vogella;
 import java.util.HashMap;
 import java.util.Map;
 
+import es.uca.vogella.Corredor;
+
 public class CorredorDAO {
 	
 	private static Map<Integer, Corredor> CorredorMap	= new HashMap<Integer, Corredor>();
 	
 public CorredorDAO() {}
+
+	static{	
+	Corredor Record = new Corredor("Liebre",10000L,25.00F);
+	Corredor Ultimo = new Corredor("Tortuga",10000L,75.00F);
+	CorredorMap.put(1,Record);
+	CorredorMap.put(2,Ultimo);
+	}
 	
 	public String insertar(Integer i ,Corredor C){
 		if(CorredorMap.containsKey(i)){
