@@ -11,8 +11,13 @@ public class CorredorDAO {
 public CorredorDAO() {}
 	
 	public String insertar(Integer i ,Corredor C){
+		if(CorredorMap.containsKey(i)){
+			return "Posicion ocupada";
+		}
+		else{
 		CorredorMap.put(i,C);
 		return C.getNombre()+" Insertado con exito";
+		}
 	}
 	
 	public String borrar(Integer pos){
