@@ -17,6 +17,7 @@
 			        android:textSize="20sp"
 			        android:textStyle="bold"
 			    />
+    			<!-- asdaasdad -->>
 
 			<TextView
 			    android:id="@+id/LblTextoGeneral"
