@@ -14,6 +14,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+@SuppressWarnings("unused")
 public class MainActivity extends FragmentActivity {
 	
 	private String[] opcionesMenu;
@@ -55,7 +56,7 @@ public class MainActivity extends FragmentActivity {
 		
 			tituloSeccion = getTitle(); tituloApp = getTitle();
 			mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-			mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.drawable.ic_launcher, R.string.drawer_open, R.string.drawer_close)
+			mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.drawable.menu_desplegable , R.string.drawer_open, R.string.drawer_close)
 			{
 			public void onDrawerClosed(View view) {
 				getActionBar().setTitle(tituloSeccion);
