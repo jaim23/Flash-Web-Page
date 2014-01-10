@@ -1,4 +1,4 @@
-package es.uca.navegation;
+package es.uca.flashmovil;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
