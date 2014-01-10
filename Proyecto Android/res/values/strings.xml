@@ -4,7 +4,6 @@
     <string name="app_name">C.D. Flash</string>
     <string name="action_settings">Ajustes</string>
     <string name="hello_world">Hello world!</string>
-    <color name="rojo">#FD2526</color>
     <color name="fondo">#FEEFEF</color>
     <string name="drawer_open">abre</string>
     <string name="drawer_close">cierra</string>
