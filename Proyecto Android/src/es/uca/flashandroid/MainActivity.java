@@ -1,5 +1,6 @@
 package es.uca.flashandroid;
 
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.res.Configuration;
@@ -8,13 +9,17 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.view.View;
+import android.view.ContextMenu.ContextMenuInfo;
 
 
 @SuppressWarnings("unused")
@@ -78,7 +83,9 @@ public class MainActivity extends FragmentActivity {
 	@Override 
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-		menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+		//menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.menu_iconos, menu);
 		return super.onPrepareOptionsMenu(menu);
 	}
 	
@@ -95,11 +102,29 @@ public class MainActivity extends FragmentActivity {
 		if (mDrawerToggle.onOptionsItemSelected(item)){return true;}
 		return super.onOptionsItemSelected(item); }
 
-	@Override
+	/*@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
-	}
+	}*/
+	
+	/*@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		textView = (TextView) findViewById(R.id.txt2);
+		switch (item.getItemId()) {
+		case R.id.MnuOpc1:
+			textView.setText("Opcion 1 pulsada!");
+		return true;
+		case R.id.MnuOpc2:
+			textView.setText("Opcion 2 pulsada!");;
+		return true;
+		case R.id.MnuOpc3:
+			textView.setText("Opcion 3 pulsada!");;
+		return true;
+		default:
+		return super.onOptionsItemSelected(item);
+		}
+	}*/
 
 }
