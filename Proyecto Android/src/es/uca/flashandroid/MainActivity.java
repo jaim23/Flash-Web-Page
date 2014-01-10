@@ -3,6 +3,7 @@ package es.uca.flashandroid;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
@@ -15,11 +16,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.view.View;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.view.View.OnClickListener;
 
 
 @SuppressWarnings("unused")
@@ -50,10 +53,11 @@ public class MainActivity extends FragmentActivity {
 			public void onItemClick(@SuppressWarnings("rawtypes") AdapterView parent, View view, int position, long id) {
 				Fragment fragment = null;
 				switch (position) {
-				case 0: fragment = new General(); break;
-				case 1: fragment = new Atletismo(); break;
-				case 2: fragment = new Baloncesto(); break;
-				case 3: fragment = new Futbol(); break;}
+					case 0: fragment = new General(); break;
+					case 1: fragment = new Atletismo(); break;
+					case 2: fragment = new Baloncesto(); break;
+					case 3: fragment = new Futbol(); break;
+					}
 				FragmentManager fragmentManager = getSupportFragmentManager();
 				fragmentManager.beginTransaction().
 				replace(R.id.content_frame,fragment).commit();
@@ -67,25 +71,25 @@ public class MainActivity extends FragmentActivity {
 			mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
 			mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.drawable.menu_desplegable, R.string.drawer_open, R.string.drawer_close) 
 			{
-			public void onDrawerClosed(View view) {
-				getActionBar().setTitle(tituloSeccion);
+				public void onDrawerClosed(View view) {
+					getActionBar().setTitle(tituloSeccion);
+					invalidateOptionsMenu(); }
+				public void onDrawerOpened(View drawerView) {
+				getActionBar().setTitle(tituloApp);
 				invalidateOptionsMenu(); }
-			public void onDrawerOpened(View drawerView) {
-			getActionBar().setTitle(tituloApp);
-			invalidateOptionsMenu(); }
-			};
-			mDrawerLayout.setDrawerListener(mDrawerToggle);
-			getActionBar().setDisplayHomeAsUpEnabled(true);
-			getActionBar().setHomeButtonEnabled(true);
-					
+				};
+				mDrawerLayout.setDrawerListener(mDrawerToggle);
+				getActionBar().setDisplayHomeAsUpEnabled(true);
+				getActionBar().setHomeButtonEnabled(true);
+							
 	}
 	
 	@Override 
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-		//menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.menu_iconos, menu);
+		menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+		//MenuInflater inflater = getMenuInflater();
+		//inflater.inflate(R.menu.main, menu);
 		return super.onPrepareOptionsMenu(menu);
 	}
 	
@@ -93,6 +97,7 @@ public class MainActivity extends FragmentActivity {
 	protected void onPostCreate(Bundle savedInstanceState){
 		super.onPostCreate(savedInstanceState);
 		mDrawerToggle.syncState(); }
+	
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
@@ -102,12 +107,12 @@ public class MainActivity extends FragmentActivity {
 		if (mDrawerToggle.onOptionsItemSelected(item)){return true;}
 		return super.onOptionsItemSelected(item); }
 
-	/*@Override
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
-	}*/
+	}
 	
 	/*@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
