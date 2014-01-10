@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout   xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:orientation="horizontal"
-    android:layout_width="fill_parent" 
-	android:layout_height="fill_parent" 
-	android:scrollbars="vertical">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"  android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    >
+
+<LinearLayout    
+	    android:orientation="vertical"
+	    android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" >
 	
     			<TextView android:id="@+id/LblGeneral" 
-			    android:layout_width="wrap_content" 
-			    android:layout_height="wrap_content" 
-			    android:text="@string/NoticiasBaloncesto"
-				android:paddingLeft="80dp"
-			    android:textColor="#FD2526"
-			    android:textStyle="bold"
-			    android:textSize="20sp"
+			        android:layout_width="match_parent"
+			        android:layout_height="44dp"
+			        android:gravity="center"
+			        android:text="@string/NoticiasBaloncesto"
+			        android:textColor="#FD2526"
+			        android:textSize="20sp"
+			        android:textStyle="bold"
 			    />
 
 			<TextView
 			    android:id="@+id/LblTextoGeneral"
 			    android:layout_width="wrap_content" 
 			    android:layout_height="wrap_content" 
-			    android:paddingTop="50dp"
 			    android:text="@string/TextoGeneral2" />
 
-</RelativeLayout>	
+</LinearLayout>
+	</ScrollView>
