@@ -6,7 +6,8 @@
 <LinearLayout    
 	    android:orientation="vertical"
 	    android:layout_width="wrap_content" 
-		android:layout_height="wrap_content" >
+		android:layout_height="wrap_content" 
+		android:gravity="center">
 	
     			<TextView android:id="@+id/LblGeneral" 
 			        android:layout_width="match_parent"
@@ -23,6 +24,22 @@
 			    android:layout_width="wrap_content" 
 			    android:layout_height="wrap_content" 
 			    android:text="@string/TextoBaloncesto" />
+			
+			<ImageView
+			    android:id="@+id/imageView4"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="20dp"
+			    android:contentDescription="@string/FotoDKV"
+			    android:src="@drawable/baloncesto" />
+			
+			<LinearLayout
+				android:layout_width="280dp"
+				android:layout_height="1dp"
+				android:background="#FD2526"
+				android:layout_marginTop="20dp"
+				android:orientation="horizontal"
+					/>
 
 </LinearLayout>
 	</ScrollView>

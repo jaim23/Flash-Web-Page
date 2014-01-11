@@ -20,6 +20,8 @@
     <string name="Foto1">Foto Corredor</string>
     <string name="Foto2">Lazo Violeta</string>
      <string name="Foto3">Pelota</string>
+     <string name="FotoCorredor">Corredor</string>
+     <string name="FotoDKV"> DKV Juventut</string>
     <string name="TextoGeneral">Cuando llegue la primavera, el discípulo de Fiz honrará a su maestro y cambiará el tartán por el asfalto. "La pista quema mucho y hay demasiados atletas en Europa que pueden hacer 13'20" en 5.000. Creo que el maratón es más rentable, hay más hueco en el continente y puedo adaptarme bien. Es una apuesta para Río, mi sueño siempre ha sido ser olímpico", reconoce.
 
 Antes se debutaba en la distancia de Filípides pasados los 30 años, pero Fernández cree que los tiempos han cambiado: "Yo estoy convencido de que se puede dar el salto antes". El suyo llegará en abril, probablemente en Viena, con un reto en la mente: "Hacer la mínima para acudir al Europeo de Zúrich".</string>
@@ -42,7 +44,7 @@ Esta derrota deja a las portuenses en tercera posición debiendo descansar la pr
     
     <string name="TextoFutbol">El Fútbol Andaluz, como siempre en casos de solidaridad urgente, ha empezado a movilizarse con la llamada de la Real Federación Andaluza de Fútbol, que ha abierto una página de donaciones de emergencia para Filipinas a través de UNICEF. Las colaboraciones están llegando con celeridad y el RETO DEL FÚTBOL ANDALUZ es llegar a los 13.000 euros de colaboración de manera inmediata, con ayuda de clubes, entrenadores, árbitros y aficionados en general.
 
-Ya puedes aportar de forma anónima o nominal tu donación en la página de la RFAF en UNICEF, bajo el título del RETO DEL FÜTBOL ANDALUZ, o enviando la palabra “RETO” al 28028. Los miles de damnificados de Filipinas esperan tu ayuda.</string>
+Ya puedes aportar de forma anónima o nominal tu donación en la página de la RFAF en UNICEF, bajo el título del RETO DEL FÚTBOL ANDALUZ, o enviando la palabra “RETO” al 28028. Los miles de damnificados de Filipinas esperan tu ayuda.</string>
 
 	
 </resources>
