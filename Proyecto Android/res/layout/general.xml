@@ -3,10 +3,11 @@
     android:scrollbars="vertical"
     >
 
-<LinearLayout    
-	    android:orientation="vertical"
-	    android:layout_width="wrap_content" 
-		android:layout_height="wrap_content" >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/LblGeneral"
@@ -17,6 +18,8 @@
         android:textColor="#FD2526"
         android:textSize="20sp"
         android:textStyle="bold" />
+    
+    <!-- Noticia 1 -->
 
     			<TextView
     			    android:id="@+id/LblTextoGeneral"
@@ -24,37 +27,70 @@
     			    android:layout_height="match_parent"
     			    android:text="@string/TextoGeneral" />
 
-				<ImageView
-			    android:id="@+id/imageView1"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:contentDescription="@string/Foto1"
-			    android:src="@drawable/media" />
-
+    			<ImageView
+    			    android:id="@+id/imageView1"
+    			    android:layout_width="wrap_content"
+    			    android:layout_height="wrap_content"
+    			    android:layout_marginTop="20dp"
+    			    android:contentDescription="@string/Foto1"
+    			    android:src="@drawable/media" />
+    			
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="1dp"
+					android:background="#FD2526"
+					 android:layout_marginTop="20dp"
+					android:orientation="horizontal"
+					/>
+					
+		<!-- Noticia 2 -->
 				<TextView
 				    android:id="@+id/LblTextoGeneral2"
 				    android:layout_width="wrap_content"
+				    android:layout_marginTop="20dp"
 				    android:layout_height="wrap_content"
 				    android:text="@string/TextoGeneral2" />
-				<ImageView
-			    android:id="@+id/imageView2"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:contentDescription="@string/Foto2"
-			    android:src="@drawable/lazo_violeta" />
 				
-								<TextView
+				<ImageView
+				    android:id="@+id/imageView2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:contentDescription="@string/Foto2"
+				    android:layout_marginTop="20dp"
+				    android:src="@drawable/lazo_violeta" />
+				
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="1dp"
+					android:background="#FD2526"
+					 android:layout_marginTop="20dp"
+					android:orientation="horizontal"
+					/>
+				
+				<!-- Noticia 3 -->
+				
+				<TextView
 				    android:id="@+id/LblTextoGeneral3"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
+				    android:layout_marginTop="20dp"
 				    android:text="@string/TextoGeneral3" />
 								
-									<ImageView
-			    android:id="@+id/imageView3"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:contentDescription="@string/Foto3"
-			    android:src="@drawable/pelota" />
+				<ImageView
+				    android:id="@+id/imageView3"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:contentDescription="@string/Foto3"
+				    android:layout_marginTop="20dp"
+				    android:src="@drawable/pelota" />
+				
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="1dp"
+					android:background="#FD2526"
+					android:layout_marginTop="20dp"
+					android:orientation="horizontal"
+					/>
 				
 				
 
