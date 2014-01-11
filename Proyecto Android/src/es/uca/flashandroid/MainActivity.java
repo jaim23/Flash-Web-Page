@@ -46,9 +46,12 @@ public class MainActivity extends FragmentActivity {
 		mDrawerList = (ListView) 
 		findViewById(R.id.left_drawer); 
 		mDrawerList.setAdapter(new ArrayAdapter<String>(getActionBar().getThemedContext(),android.R.layout.simple_list_item_1,opcionesMenu));
+		mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 		
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setHomeButtonEnabled(true);
 		
-		mDrawerList.setOnItemClickListener(new OnItemClickListener() {
+		/*mDrawerList.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(@SuppressWarnings("rawtypes") AdapterView parent, View view, int position, long id) {
 				Fragment fragment = null;
@@ -65,7 +68,14 @@ public class MainActivity extends FragmentActivity {
 				tituloSeccion = opcionesMenu[position];
 				getActionBar().setTitle(tituloSeccion);
 				mDrawerLayout.closeDrawer(mDrawerList); }  
-			});
+			});*/
+		
+		mDrawerLayout.setDrawerListener(mDrawerToggle);
+		
+		
+		if (savedInstanceState == null) {
+			displayView(0);
+		}
 		
 		tituloSeccion = getTitle(); tituloApp = getTitle(); 
 			mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
@@ -83,6 +93,37 @@ public class MainActivity extends FragmentActivity {
 				getActionBar().setHomeButtonEnabled(true);
 							
 	}
+	
+	private class SlideMenuClickListener implements
+	ListView.OnItemClickListener {
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position,
+			long id) {
+		// display view for selected nav drawer item
+		displayView(position);
+	}
+}
+	
+	
+	
+	private void displayView(int position) {
+
+		Fragment fragment = null;
+		switch (position) {
+			case 0: fragment = new General(); break;
+			case 1: fragment = new Atletismo(); break;
+			case 2: fragment = new Baloncesto(); break;
+			case 3: fragment = new Futbol(); break;
+			}
+		FragmentManager fragmentManager = getSupportFragmentManager();
+		fragmentManager.beginTransaction().
+		replace(R.id.content_frame,fragment).commit();
+		mDrawerList.setItemChecked(position, true);
+		tituloSeccion = opcionesMenu[position];
+		getActionBar().setTitle(tituloSeccion);
+		mDrawerLayout.closeDrawer(mDrawerList);  
+	}
+	
 	
 	@Override 
 	public boolean onPrepareOptionsMenu(Menu menu) {
