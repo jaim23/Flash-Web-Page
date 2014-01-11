@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">C.D. Flash</string>
@@ -17,7 +16,7 @@
 	<string name="NombreApell"> Nombre y Apellidos </string>
 	<string name="Mensaje">Mensaje</string>
 	<string name="TituloContacto">Conctacta</string>
-
+	<string name="FotoFutbol">Emergencia Filipinas</string>
     <string name="Foto1">Foto Corredor</string>
     <string name="Foto2">Lazo Violeta</string>
      <string name="Foto3">Pelota</string>
@@ -29,4 +28,21 @@ Antes se debutaba en la distancia de Filípides pasados los 30 años, pero Fern�
 
 El equipo se reponía de esa adversidad, y continuaba buscando el gol, que estuvo a punto de llegar en un tanto anulado y un larguero de los locales.</string>
 
+    <string name="TextoAtletismo">Este fin de semana, en concreto el domingo tendremos participación de nuestros atletas en tres pruebas. Por un lado Algodonales y El Puerto de Santa María acaparan el interés del atletismo provincial, por otro lado, hasta Córdoba, donde se disputa la 29ª Edición de la Media Maratón de Córdoba se desplazarán Jose Ruiz Morales y Carlos Garrido.
+
+En lo que respecta a la provincia,en el municipio de Algodonales de la Sierra de Cádiz se desarrollará la VII Carrera Urbana Sierra de Lijar, que saldrá a las 10.00 horas desde la Plaza de la Constitución y contará con un recorrido de 9.300 metros, hasta allí se desplazará Jesús Sánchez Morales.
+
+Y a la misma hora tendrá lugar en El Puerto de Santa María, la XIX Carrera Popular Puerto Menesteo, cita que se iniciará y finalizará en la Ciudad Deportiva portuense. En la prueba absoluta participaremos con 41 atletas, mientras que en las categorías base tendremos tambien una alta representación con casi 25 atletas inscritos.</string>
+
+    <string name="TextoBaloncesto">El primer equipo senior femenino del Club Baloncesto Portuense, DKV El Puerto, cedió el liderato del grupo tras perder en el pabellón municipal portuense ante el ADEBA de Córdoba por 60-80.
+
+Las portuenses no mostraron su mejor cara ante su público, no encontrándose cómodas sobre la cancha y siendo superadas por un rival que imprimió rapidez al partido sin que las locales pudieran seguirle.
+
+Esta derrota deja a las portuenses en tercera posición debiendo descansar la próxima semana que servirá para cargar pilas y afrontar con fuerza el tramo final de la primera vuelta.</string>
+    
+    <string name="TextoFutbol">El Fútbol Andaluz, como siempre en casos de solidaridad urgente, ha empezado a movilizarse con la llamada de la Real Federación Andaluza de Fútbol, que ha abierto una página de donaciones de emergencia para Filipinas a través de UNICEF. Las colaboraciones están llegando con celeridad y el RETO DEL FÚTBOL ANDALUZ es llegar a los 13.000 euros de colaboración de manera inmediata, con ayuda de clubes, entrenadores, árbitros y aficionados en general.
+
+Ya puedes aportar de forma anónima o nominal tu donación en la página de la RFAF en UNICEF, bajo el título del RETO DEL FÜTBOL ANDALUZ, o enviando la palabra “RETO” al 28028. Los miles de damnificados de Filipinas esperan tu ayuda.</string>
+
+	
 </resources>

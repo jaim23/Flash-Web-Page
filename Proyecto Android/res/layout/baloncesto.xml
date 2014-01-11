@@ -16,14 +16,13 @@
 			        android:textColor="#FD2526"
 			        android:textSize="20sp"
 			        android:textStyle="bold"
-			    />
-    			<!-- asdaasdad -->>
+			    /> 
 
 			<TextView
-			    android:id="@+id/LblTextoGeneral"
+			    android:id="@+id/LblTextoBaloncesto"
 			    android:layout_width="wrap_content" 
 			    android:layout_height="wrap_content" 
-			    android:text="@string/TextoGeneral2" />
+			    android:text="@string/TextoBaloncesto" />
 
 </LinearLayout>
 	</ScrollView>

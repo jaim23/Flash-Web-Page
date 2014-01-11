@@ -20,10 +20,10 @@
 			    />
 
 			<TextView
-			    android:id="@+id/LblTextoGeneral"
+			    android:id="@+id/LblTextoAtletismo"
 			    android:layout_width="wrap_content" 
 			    android:layout_height="wrap_content" 
-			    android:text="@string/TextoGeneral2" />
+			    android:text="@string/TextoAtletismo" />
 
 </LinearLayout>
 	</ScrollView>

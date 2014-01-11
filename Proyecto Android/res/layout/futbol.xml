@@ -19,10 +19,17 @@
 			    />
 
 			<TextView
-			    android:id="@+id/LblTextoGeneral"
+			    android:id="@+id/LblTextoFutboll"
 			    android:layout_width="wrap_content" 
 			    android:layout_height="wrap_content" 
-			    android:text="@string/TextoGeneral2" />
+			    android:text="@string/TextoFutbol" />
+			
+			<ImageView
+			    android:id="@+id/imageViewF"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:contentDescription="@string/FotoFutbol"
+			    android:src="@drawable/filipinas" />
 
 </LinearLayout>
 	</ScrollView>
