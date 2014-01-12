@@ -1,6 +1,6 @@
 package es.uca.flashandroid;
 
-
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.ContextMenu;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -18,6 +20,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.view.View;
@@ -34,7 +37,6 @@ public class MainActivity extends FragmentActivity {
 	private CharSequence tituloApp;
 	private ActionBarDrawerToggle mDrawerToggle;
 	
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -52,7 +54,6 @@ public class MainActivity extends FragmentActivity {
 		getActionBar().setHomeButtonEnabled(true);
 				
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-		
 		
 		if (savedInstanceState == null) {
 			displayView(0);
@@ -72,7 +73,19 @@ public class MainActivity extends FragmentActivity {
 				mDrawerLayout.setDrawerListener(mDrawerToggle);
 				getActionBar().setDisplayHomeAsUpEnabled(true);
 				getActionBar().setHomeButtonEnabled(true);
+				
 							
+	}
+	
+	private void mensaje(){
+		//Toast.makeText(MainActivity.this, "Bienvenido",Toast.LENGTH_SHORT).show();
+		  LayoutInflater inflater = getLayoutInflater();
+	        View layout = inflater.inflate(R.layout.bienvenido,    null);
+	        Toast toast = new Toast(getApplicationContext());
+	        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+	        toast.setDuration(Toast.LENGTH_SHORT);
+	        toast.setView(layout);
+	        toast.show(); 
 	}
 	
 	private class SlideMenuClickListener implements
@@ -111,13 +124,16 @@ public class MainActivity extends FragmentActivity {
 		//menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
 		//MenuInflater inflater = getMenuInflater();
 		//inflater.inflate(R.menu.main, menu);
+	
 		return super.onPrepareOptionsMenu(menu);
 	}
 	
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState){
 		super.onPostCreate(savedInstanceState);
-		mDrawerToggle.syncState(); }
+		mensaje();
+		mDrawerToggle.syncState();
+	}
 	
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
@@ -135,23 +151,5 @@ public class MainActivity extends FragmentActivity {
 		//getMenuInflater().inflate(R.menu.botones, menu);
 		return true;
 	}
-	
-	/*@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		textView = (TextView) findViewById(R.id.txt2);
-		switch (item.getItemId()) {
-		case R.id.MnuOpc1:
-			textView.setText("Opcion 1 pulsada!");
-		return true;
-		case R.id.MnuOpc2:
-			textView.setText("Opcion 2 pulsada!");;
-		return true;
-		case R.id.MnuOpc3:
-			textView.setText("Opcion 3 pulsada!");;
-		return true;
-		default:
-		return super.onOptionsItemSelected(item);
-		}
-	}*/
 
 }
