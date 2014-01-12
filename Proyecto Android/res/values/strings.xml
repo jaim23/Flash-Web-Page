@@ -16,6 +16,8 @@
 	<string name="NombreApell"> Nombre y Apellidos </string>
 	<string name="Mensaje">Mensaje</string>
 	<string name="TituloContacto">Conctacta</string>
+	<string name="Bienvenido">Bienvenido</string>
+	<string name="FotoToast">Logo</string>
 	<string name="FotoFutbol">Emergencia Filipinas</string>
     <string name="Foto1">Foto Corredor</string>
     <string name="Foto2">Lazo Violeta</string>
