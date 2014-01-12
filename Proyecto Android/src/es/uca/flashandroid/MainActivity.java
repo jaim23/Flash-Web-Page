@@ -96,13 +96,12 @@ public class MainActivity extends FragmentActivity  {
 			case 1: fragment = new Atletismo(); break;
 			case 2: fragment = new Baloncesto(); break;
 			case 3: fragment = new Futbol(); break;
+			case 4: fragment = new Contacto(); break;
+			case 5: fragment = new Aviso(); break;
 			}
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		fragmentManager.beginTransaction().
 		replace(R.id.content_frame,fragment).commit();
-		mDrawerList.setItemChecked(position, true);
-		tituloSeccion = opcionesMenu[position];
-		getActionBar().setTitle(tituloSeccion);
 		mDrawerLayout.closeDrawer(mDrawerList);  
 	}
 	
@@ -125,21 +124,18 @@ public class MainActivity extends FragmentActivity  {
 		mDrawerToggle.onConfigurationChanged(newConfig);}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		if (mDrawerToggle.onOptionsItemSelected(item)){return true;}
-		
 		switch (item.getItemId()) {
 		case R.id.MnuCont:
-			LayoutInflater li=(LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-            li.inflate(R.layout.contacto,null);
+			displayView(4);
 
 		return true;
 		case R.id.MnuAviso:
-			LayoutInflater la=(LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-            la.inflate(R.layout.general,null);
+			displayView(5);
 			Toast.makeText(this, "Boton Aviso Legal", Toast.LENGTH_SHORT).show();
 			
 		return true;
 		default:
+			if (mDrawerToggle.onOptionsItemSelected(item)){return true;}
 			return super.onOptionsItemSelected(item);
 
 		}
