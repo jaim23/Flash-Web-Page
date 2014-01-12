@@ -1,37 +1,26 @@
 package es.uca.flashandroid;
 
-import android.os.AsyncTask;
+
 import android.os.Bundle;
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
-import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
-import android.view.View.OnClickListener;
 
 
-@SuppressWarnings("unused")
+
 public class MainActivity extends FragmentActivity  {
 	private String[] opcionesMenu;
 	private DrawerLayout mDrawerLayout;
@@ -39,7 +28,7 @@ public class MainActivity extends FragmentActivity  {
 	private CharSequence tituloSeccion;
 	private CharSequence tituloApp;
 	private ActionBarDrawerToggle mDrawerToggle;
-	
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -120,7 +109,6 @@ public class MainActivity extends FragmentActivity  {
 	
 	@Override 
 	public boolean onPrepareOptionsMenu(Menu menu) {
-		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);	
 		return super.onPrepareOptionsMenu(menu);
 	}
 	
@@ -141,10 +129,13 @@ public class MainActivity extends FragmentActivity  {
 		
 		switch (item.getItemId()) {
 		case R.id.MnuCont:
-			Toast.makeText(this, "Boton Contacto", Toast.LENGTH_SHORT).show();
+			LayoutInflater li=(LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+            li.inflate(R.layout.contacto,null);
 
 		return true;
 		case R.id.MnuAviso:
+			LayoutInflater la=(LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+            la.inflate(R.layout.general,null);
 			Toast.makeText(this, "Boton Aviso Legal", Toast.LENGTH_SHORT).show();
 			
 		return true;
