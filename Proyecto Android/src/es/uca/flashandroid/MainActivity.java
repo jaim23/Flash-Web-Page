@@ -3,6 +3,7 @@ package es.uca.flashandroid;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -16,9 +17,11 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
@@ -29,7 +32,7 @@ import android.view.View.OnClickListener;
 
 
 @SuppressWarnings("unused")
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity  {
 	private String[] opcionesMenu;
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
@@ -67,13 +70,10 @@ public class MainActivity extends FragmentActivity {
 					getActionBar().setTitle(tituloSeccion);
 					invalidateOptionsMenu(); }
 				public void onDrawerOpened(View drawerView) {
-				getActionBar().setTitle(tituloApp);
-				invalidateOptionsMenu(); }
+					getActionBar().setTitle(tituloApp);
+					invalidateOptionsMenu(); }
 				};
-				mDrawerLayout.setDrawerListener(mDrawerToggle);
-				getActionBar().setDisplayHomeAsUpEnabled(true);
-				getActionBar().setHomeButtonEnabled(true);
-				
+							
 							
 	}
 	
@@ -120,11 +120,7 @@ public class MainActivity extends FragmentActivity {
 	
 	@Override 
 	public boolean onPrepareOptionsMenu(Menu menu) {
-		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-		//menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
-		//MenuInflater inflater = getMenuInflater();
-		//inflater.inflate(R.menu.main, menu);
-	
+		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);	
 		return super.onPrepareOptionsMenu(menu);
 	}
 	
@@ -142,13 +138,29 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (mDrawerToggle.onOptionsItemSelected(item)){return true;}
-		return super.onOptionsItemSelected(item); }
+		
+		switch (item.getItemId()) {
+		case R.id.MnuCont:
+			Toast.makeText(this, "Boton Contacto", Toast.LENGTH_SHORT).show();
+
+		return true;
+		case R.id.MnuAviso:
+			Toast.makeText(this, "Boton Aviso Legal", Toast.LENGTH_SHORT).show();
+			
+		return true;
+		default:
+			return super.onOptionsItemSelected(item);
+
+		}
+			
+	}
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		//getMenuInflater().inflate(R.menu.botones, menu);
+	    MenuInflater inflater = getMenuInflater();
+	    inflater.inflate(R.menu.main, menu);
 		return true;
 	}
 
