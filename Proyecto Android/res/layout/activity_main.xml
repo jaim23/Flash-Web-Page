@@ -3,6 +3,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/drawer_layout"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	
 	>
 	
 	<FrameLayout
@@ -15,10 +16,10 @@
 	android:layout_height="match_parent"
 	android:layout_gravity="start"
 	android:choiceMode="singleChoice"
-	android:divider="#FFFF00"
+	android:divider="@color/amarillo"
 	android:dividerHeight="1dp"
-	android:background="#FD2526"
-	android:color="#FFFF00"
+	android:background="@color/rojo"
+	android:color="@color/amarillo"
 	/>
 	
 </android.support.v4.widget.DrawerLayout>

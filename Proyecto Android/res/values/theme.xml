@@ -7,6 +7,7 @@
     <style name="MiTema">
          <item name="android:windowBackground">@color/rojo</item>
          <item name="android:textColor">@color/amarillo</item>
+     
     </style>
      
 
