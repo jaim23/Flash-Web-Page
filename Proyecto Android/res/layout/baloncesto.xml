@@ -17,6 +17,8 @@
 			        android:text="@string/NoticiasBaloncesto"
 			        android:textColor="#FD2526"
 			        android:textSize="20sp"
+			        android:shadowColor="#BB000000"
+   					android:shadowRadius="2.75"
 			        android:textStyle="bold"
 			    /> 
 
