@@ -10,8 +10,8 @@
     <string name="NoticiasAtletismo">Noticias Atletismo</string>
     <string name="NoticiasFutbol">Noticias Futbol</string>
     <string name="NoticiasBaloncesto">Noticias Baloncesto</string>
-	<string name="Contacto"> </string>
-	<string name="Aviso"> </string>
+	<string name="Contacto">Contacto</string>
+	<string name="Aviso">Aviso</string>
 	<string name="Enviar"> Enviar </string>
 	<string name="NombreApell"> Nombre y Apellidos </string>
 	<string name="Mensaje">Mensaje</string>
