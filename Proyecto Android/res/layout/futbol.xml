@@ -6,6 +6,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="#FEEFEF"
    	android:gravity="center"  >
 	
     			<TextView android:id="@+id/LblGeneral" 
@@ -23,6 +24,7 @@
 			    android:id="@+id/LblTextoFutboll"
 			    android:layout_width="wrap_content" 
 			    android:layout_height="wrap_content" 
+			    android:textColor="#000000"
 			    android:text="@string/TextoFutbol" 
 			
 			    />

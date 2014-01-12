@@ -18,7 +18,7 @@
 	android:divider="#FFFF00"
 	android:dividerHeight="1dp"
 	android:background="#FD2526"
-	android:color="#000000"
+	android:color="#FFFF00"
 	/>
 	
 </android.support.v4.widget.DrawerLayout>

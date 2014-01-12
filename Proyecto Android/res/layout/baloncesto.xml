@@ -7,6 +7,7 @@
 	    android:orientation="vertical"
 	    android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" 
+		android:background="#FEEFEF"
 		android:gravity="center">
 	
     			<TextView android:id="@+id/LblGeneral" 
@@ -23,13 +24,14 @@
 			    android:id="@+id/LblTextoBaloncesto"
 			    android:layout_width="wrap_content" 
 			    android:layout_height="wrap_content" 
+			    android:textColor="#000000"
 			    android:text="@string/TextoBaloncesto" />
 			
 			<ImageView
 			    android:id="@+id/imageView4"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
-			    android:layout_marginTop="20dp"
+			    android:layout_marginTop="35dp"
 			    android:contentDescription="@string/FotoDKV"
 			    android:src="@drawable/baloncesto" />
 			
