@@ -50,26 +50,7 @@ public class MainActivity extends FragmentActivity {
 		
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		getActionBar().setHomeButtonEnabled(true);
-		
-		/*mDrawerList.setOnItemClickListener(new OnItemClickListener() {
-			@Override
-			public void onItemClick(@SuppressWarnings("rawtypes") AdapterView parent, View view, int position, long id) {
-				Fragment fragment = null;
-				switch (position) {
-					case 0: fragment = new General(); break;
-					case 1: fragment = new Atletismo(); break;
-					case 2: fragment = new Baloncesto(); break;
-					case 3: fragment = new Futbol(); break;
-					}
-				FragmentManager fragmentManager = getSupportFragmentManager();
-				fragmentManager.beginTransaction().
-				replace(R.id.content_frame,fragment).commit();
-				mDrawerList.setItemChecked(position, true);
-				tituloSeccion = opcionesMenu[position];
-				getActionBar().setTitle(tituloSeccion);
-				mDrawerLayout.closeDrawer(mDrawerList); }  
-			});*/
-		
+				
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 		
 		
@@ -97,9 +78,8 @@ public class MainActivity extends FragmentActivity {
 	private class SlideMenuClickListener implements
 	ListView.OnItemClickListener {
 	@Override
-	public void onItemClick(AdapterView<?> parent, View view, int position,
-			long id) {
-		// display view for selected nav drawer item
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+	
 		displayView(position);
 	}
 }
@@ -128,7 +108,7 @@ public class MainActivity extends FragmentActivity {
 	@Override 
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-		menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+		//menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
 		//MenuInflater inflater = getMenuInflater();
 		//inflater.inflate(R.menu.main, menu);
 		return super.onPrepareOptionsMenu(menu);
@@ -152,6 +132,7 @@ public class MainActivity extends FragmentActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
+		//getMenuInflater().inflate(R.menu.botones, menu);
 		return true;
 	}
 	
