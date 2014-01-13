@@ -1,6 +1,7 @@
 package es.uca.flashandroid;
 
 
+
 import android.media.RingtoneManager;
 import android.os.Bundle;
 import android.app.NotificationManager;
@@ -14,6 +15,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -21,6 +23,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ListView;
 import android.view.View;
@@ -35,9 +38,11 @@ public class MainActivity extends FragmentActivity  {
 	private CharSequence tituloApp;
 	private ActionBarDrawerToggle mDrawerToggle;
 	private static final int NOTIF_ALERTA_ID = 1;
+	private EditText local;
 		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
@@ -68,7 +73,17 @@ public class MainActivity extends FragmentActivity  {
 				public void onDrawerOpened(View drawerView) {
 					getActionBar().setTitle(tituloApp);
 					invalidateOptionsMenu(); }
-				};							
+				};	
+				
+		local=(EditText) findViewById(R.id.input);	
+								
+	}
+	
+	public void buscarLocal(View view){
+		
+		String calle = local.getText().toString();
+		if(!TextUtils.isEmpty(calle)){}
+		
 	}
 	
 	private void mensaje(){
@@ -100,9 +115,10 @@ public class MainActivity extends FragmentActivity  {
 			case 1: fragment = new Atletismo(); break;
 			case 2: fragment = new Baloncesto(); break;
 			case 3: fragment = new Futbol(); break;
-			case 4: fragment = new Contacto(); break;
-			case 5: fragment = new Aviso(); break;
-			case 6: fragment = new Rest(); break;
+			case 4: fragment = new Rest(); break;
+			case 5: fragment = new Contacto(); break;
+			case 6: fragment = new Aviso(); break;
+			
 			}
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		fragmentManager.beginTransaction().
@@ -127,11 +143,12 @@ public class MainActivity extends FragmentActivity  {
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		mDrawerToggle.onConfigurationChanged(newConfig);}
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.MnuCont:
-			displayView(4);
+			displayView(5);
 			
 
 				NotificationCompat.Builder notificacion =
@@ -155,7 +172,7 @@ public class MainActivity extends FragmentActivity  {
 			
 		return true;
 		case R.id.MnuAviso:
-			displayView(5);
+			displayView(6);
 			
 		return true;
 		default:
@@ -177,3 +194,4 @@ public class MainActivity extends FragmentActivity  {
 	}
 	
 }
+

@@ -46,7 +46,6 @@
         android:id="@+id/buttonEnviar"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:background="@color/rojo"
         android:text="@string/Enviar" />
 
 </TableLayout>
