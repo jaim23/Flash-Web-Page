@@ -1,12 +1,18 @@
 package es.uca.flashandroid;
 
 
+import android.media.RingtoneManager;
 import android.os.Bundle;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -28,13 +34,14 @@ public class MainActivity extends FragmentActivity  {
 	private CharSequence tituloSeccion;
 	private CharSequence tituloApp;
 	private ActionBarDrawerToggle mDrawerToggle;
+	private static final int NOTIF_ALERTA_ID = 1;
 		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		opcionesMenu = new String[] {"General", "Atletismo", "Baloncesto","Fútbol"};
+		opcionesMenu = new String[] {"General", "Atletismo", "Baloncesto","Fútbol","Servicio Web"};
 		mDrawerLayout = (DrawerLayout) 
 		findViewById(R.id.drawer_layout);
 		mDrawerList = (ListView) 
@@ -61,9 +68,7 @@ public class MainActivity extends FragmentActivity  {
 				public void onDrawerOpened(View drawerView) {
 					getActionBar().setTitle(tituloApp);
 					invalidateOptionsMenu(); }
-				};
-							
-							
+				};							
 	}
 	
 	private void mensaje(){
@@ -81,7 +86,6 @@ public class MainActivity extends FragmentActivity  {
 	ListView.OnItemClickListener {
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-	
 		displayView(position);
 	}
 }
@@ -98,6 +102,7 @@ public class MainActivity extends FragmentActivity  {
 			case 3: fragment = new Futbol(); break;
 			case 4: fragment = new Contacto(); break;
 			case 5: fragment = new Aviso(); break;
+			case 6: fragment = new Rest(); break;
 			}
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		fragmentManager.beginTransaction().
@@ -127,11 +132,30 @@ public class MainActivity extends FragmentActivity  {
 		switch (item.getItemId()) {
 		case R.id.MnuCont:
 			displayView(4);
+			
 
+				NotificationCompat.Builder notificacion =
+						new NotificationCompat.Builder(MainActivity.this)
+						.setSmallIcon(R.drawable.ic_launcher)
+						.setContentTitle("C.D. Flash")
+						.setContentText("Volver a General")
+						.setAutoCancel(true)
+						.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+				
+				Intent notIntent = new Intent(MainActivity.this,MainActivity.class); 
+						PendingIntent contIntent = PendingIntent.getActivity(MainActivity.this,0, notIntent,0);
+						notificacion.setContentIntent(contIntent);
+				
+				
+						NotificationManager mNotificationManager = 
+						(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+						mNotificationManager.notify(NOTIF_ALERTA_ID, 
+						notificacion.build());
+					
+			
 		return true;
 		case R.id.MnuAviso:
 			displayView(5);
-			Toast.makeText(this, "Boton Aviso Legal", Toast.LENGTH_SHORT).show();
 			
 		return true;
 		default:
@@ -143,6 +167,7 @@ public class MainActivity extends FragmentActivity  {
 	}
 	
 
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -150,5 +175,5 @@ public class MainActivity extends FragmentActivity  {
 	    inflater.inflate(R.menu.main, menu);
 		return true;
 	}
-
+	
 }
