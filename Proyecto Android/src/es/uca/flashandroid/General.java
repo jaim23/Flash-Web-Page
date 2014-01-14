@@ -16,7 +16,9 @@ public class General extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState){
 
 		return inflater.inflate(R.layout.general,container, false);
+		
 	}
+	
 	
 
 }

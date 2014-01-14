@@ -2,20 +2,13 @@ package es.uca.flashandroid;
 
 
 
-import android.media.RingtoneManager;
 import android.os.Bundle;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.NotificationCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,7 +16,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ListView;
 import android.view.View;
@@ -37,8 +29,9 @@ public class MainActivity extends FragmentActivity  {
 	private CharSequence tituloSeccion;
 	private CharSequence tituloApp;
 	private ActionBarDrawerToggle mDrawerToggle;
-	private static final int NOTIF_ALERTA_ID = 1;
-	private EditText local;
+	
+	private static int cont= 0;
+	
 		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -75,21 +68,13 @@ public class MainActivity extends FragmentActivity  {
 					invalidateOptionsMenu(); }
 				};	
 				
-		local=(EditText) findViewById(R.id.input);	
 								
 	}
-	
-	public void buscarLocal(View view){
 		
-		String calle = local.getText().toString();
-		if(!TextUtils.isEmpty(calle)){}
-		
-	}
-	
 	private void mensaje(){
 		//Toast.makeText(MainActivity.this, "Bienvenido",Toast.LENGTH_SHORT).show();
 		  LayoutInflater inflater = getLayoutInflater();
-	        View layout = inflater.inflate(R.layout.bienvenido,    null);
+	        View layout = inflater.inflate(R.layout.bienvenido,null);
 	        Toast toast = new Toast(getApplicationContext());
 	        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 	        toast.setDuration(Toast.LENGTH_SHORT);
@@ -135,7 +120,8 @@ public class MainActivity extends FragmentActivity  {
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState){
 		super.onPostCreate(savedInstanceState);
-		mensaje();
+		if(cont ==0)
+			{mensaje();cont++;}
 		mDrawerToggle.syncState();
 	}
 	
@@ -146,30 +132,11 @@ public class MainActivity extends FragmentActivity  {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		
 		switch (item.getItemId()) {
 		case R.id.MnuCont:
 			displayView(5);
-			
-
-				NotificationCompat.Builder notificacion =
-						new NotificationCompat.Builder(MainActivity.this)
-						.setSmallIcon(R.drawable.ic_launcher)
-						.setContentTitle("C.D. Flash")
-						.setContentText("Volver a General")
-						.setAutoCancel(true)
-						.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
-				
-				Intent notIntent = new Intent(MainActivity.this,MainActivity.class); 
-						PendingIntent contIntent = PendingIntent.getActivity(MainActivity.this,0, notIntent,0);
-						notificacion.setContentIntent(contIntent);
-				
-				
-						NotificationManager mNotificationManager = 
-						(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-						mNotificationManager.notify(NOTIF_ALERTA_ID, 
-						notificacion.build());
-					
-			
+	
 		return true;
 		case R.id.MnuAviso:
 			displayView(6);
