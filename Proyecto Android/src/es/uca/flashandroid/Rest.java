@@ -11,6 +11,9 @@ import org.apache.http.util.EntityUtils;
 
 
 
+
+import org.json.JSONObject;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,6 +22,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,7 +56,14 @@ public class Rest extends Fragment {
 		protected String doInBackground (Void ...params){
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpContext localContext = new BasicHttpContext();
-			HttpGet httpGet = new HttpGet("http://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&sensor=true");
+			final EditText txtTexto = (EditText)getActivity().findViewById(R.id.inputCalle);
+			String calle = txtTexto.getText().toString();
+			final EditText txtNumero = (EditText)getActivity().findViewById(R.id.inputNumero);
+			String numero = txtNumero.getText().toString();
+			final EditText txtCiudad = (EditText)getActivity().findViewById(R.id.inputCiudad);
+			String ciudad = txtCiudad.getText().toString();
+		
+			HttpGet httpGet = new HttpGet("http://maps.googleapis.com/maps/api/geocode/xml?address="+calle+"+"+numero+"+"+ciudad+"&sensor=true");
 			String text = null;
 			try {
 				HttpResponse response = httpClient.execute(httpGet, localContext);
@@ -61,7 +72,29 @@ public class Rest extends Fragment {
 				text=EntityUtils.toString(entity);
 			} catch (Exception e) { return e.toString(); }
 
-		return text; }	
+		return text; 
+		/*	HttpClient httpClient = new DefaultHttpClient();
+			final EditText txtTexto = (EditText)getActivity().findViewById(R.id.inputCalle);
+			String calle = txtTexto.getText().toString();
+			final EditText txtNumero = (EditText)getActivity().findViewById(R.id.inputNumero);
+			String numero = txtNumero.getText().toString();
+			final EditText txtCiudad = (EditText)getActivity().findViewById(R.id.inputCiudad);
+			String ciudad = txtCiudad.getText().toString();
+			HttpGet httpGet = new HttpGet("http://maps.googleapis.com/maps/api/geocode/json?address="+calle+"+"+numero+"+"+ciudad+"&sensor=false");
+			httpGet.setHeader("content-type", "application/json");
+			String respStr = null;
+			try {
+				HttpResponse response=httpClient.execute(httpGet);
+				respStr = EntityUtils.toString(response.getEntity());
+				
+				JSONObject respJSON = new JSONObject(respStr);
+				String nombre = respJSON.getString("formatted_address");
+				//String autor = respJSON.getString("location");
+				respStr= nombre ;
+			} catch (Exception e) { return e.toString(); }
+			return respStr; */
+		
+		}	
 		
 		
 		protected void onPostExecute(String results) {
