@@ -13,6 +13,9 @@
     <string name="Localiza">Localizaciones</string>
 	<string name="Contacto">Contacto</string>
 	<string name="Aviso">Aviso Legal</string>
+	<string name="Ciudad">Ciudad</string>
+	<string name="Calle">Calle</string>
+	<string name="Numero">Número</string>	
 	<string name="Enviar"> Enviar </string>
 	<string name="NombreApell"> Nombre y Apellidos </string>
 	<string name="Mensaje">Mensaje</string>

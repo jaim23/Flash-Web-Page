@@ -11,11 +11,9 @@ import org.apache.http.util.EntityUtils;
 
 
 
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,7 +52,7 @@ public class Rest extends Fragment {
 		protected String doInBackground (Void ...params){
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpContext localContext = new BasicHttpContext();
-			HttpGet httpGet = new HttpGet("http://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&sensor=true_or_false");
+			HttpGet httpGet = new HttpGet("http://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&sensor=true");
 			String text = null;
 			try {
 				HttpResponse response = httpClient.execute(httpGet, localContext);
