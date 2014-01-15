@@ -75,7 +75,7 @@ public class Rest extends Fragment {
 			try {
 				HttpResponse response=httpClient.execute(httpGet);
 				respStr = EntityUtils.toString(response.getEntity());
-				String texto=" ";
+				String texto=nuevalinea;
 				JSONObject respJSON = new JSONObject(respStr);
 				JSONArray jArray = respJSON.optJSONArray("results");
 				String estado = respJSON.getString("status");
@@ -87,10 +87,10 @@ public class Rest extends Fragment {
 					 JSONObject geo = jsonObject.getJSONObject("geometry");
 					 JSONObject lonlat = geo.getJSONObject("location");
 					 
-					 String lat =lonlat.getString("lat");
+					 String lat = lonlat.getString("lat");
 					 String lng = lonlat.getString("lng");
 					 
-					 texto=direccion+nuevalinea+nuevalinea+"Latitud: "+lat+nuevalinea+"Longitud: "+lng;
+					 texto+=nuevalinea+direccion+nuevalinea+nuevalinea+"Latitud: "+lat+nuevalinea+"Longitud: "+lng+nuevalinea;
 				 }
 
 				 if(estado.equals("ZERO_RESULTS"))

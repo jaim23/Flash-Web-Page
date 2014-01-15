@@ -29,8 +29,7 @@ public class Contacto extends Fragment {
 		
 		Intent notIntent = new Intent(contexto,MainActivity.class); 
 		PendingIntent contIntent = PendingIntent.getActivity(contexto,0, notIntent,0);
-		//notificacion.setContentIntent(contIntent);
-
+		
 		NotificationCompat.Builder notificacion =
 				new NotificationCompat.Builder(contexto)
 				.setSmallIcon(R.drawable.ic_launcher)

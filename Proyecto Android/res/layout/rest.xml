@@ -67,7 +67,8 @@
         android:id="@+id/textPosicion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/rojo"
+        android:textColor="#000000"
+        android:textStyle="bold"
         android:background="@color/fondo"
         android:layout_marginTop="35dp"
         
