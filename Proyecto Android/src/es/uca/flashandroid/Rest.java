@@ -12,7 +12,7 @@ import org.apache.http.util.EntityUtils;
 
 
 
-import org.json.JSONObject;
+//import org.json.JSONObject;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -56,6 +56,7 @@ public class Rest extends Fragment {
 		protected String doInBackground (Void ...params){
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpContext localContext = new BasicHttpContext();
+			
 			final EditText txtTexto = (EditText)getActivity().findViewById(R.id.inputCalle);
 			String calle = txtTexto.getText().toString();
 			final EditText txtNumero = (EditText)getActivity().findViewById(R.id.inputNumero);
@@ -73,13 +74,16 @@ public class Rest extends Fragment {
 			} catch (Exception e) { return e.toString(); }
 
 		return text; 
+		
 		/*	HttpClient httpClient = new DefaultHttpClient();
+		 
 			final EditText txtTexto = (EditText)getActivity().findViewById(R.id.inputCalle);
 			String calle = txtTexto.getText().toString();
 			final EditText txtNumero = (EditText)getActivity().findViewById(R.id.inputNumero);
 			String numero = txtNumero.getText().toString();
 			final EditText txtCiudad = (EditText)getActivity().findViewById(R.id.inputCiudad);
 			String ciudad = txtCiudad.getText().toString();
+			
 			HttpGet httpGet = new HttpGet("http://maps.googleapis.com/maps/api/geocode/json?address="+calle+"+"+numero+"+"+ciudad+"&sensor=false");
 			httpGet.setHeader("content-type", "application/json");
 			String respStr = null;
